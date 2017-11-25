@@ -1,0 +1,124 @@
+{
+  ".text.tex.latex": {
+    "snippet": {
+      "\\begin{}...\\end{}": {
+        "prefix": "\\begin",
+        "snippet": "\\\\begin{${1:env}}$2\n\t$0\n\\\\end{${1:env}}",
+        "description": "Begin new environment",
+        "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
+      },
+      "\\usepackage{}": {
+        "prefix": "\\usepackage",
+        "snippet": "\\\\usepackage$2{${1:<package>}}\n$0",
+        "description": "Load a package",
+        "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
+      },
+      "\\documentclass{}": {
+        "prefix": "\\documentclass",
+        "snippet": "\\\\documentclass[${2:optional}]{${1:<class>}}\n$0",
+        "description": "Set document class",
+        "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
+      },
+      "\\begin{align}": {
+        "prefix": "\\align",
+        "snippet": "\\%\n\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
+        "description": "Begin amsmath align environment",
+        "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
+      },
+      "!TEX root": {
+        "prefix": "!TEX root",
+        "snippet": "% !TEX root = $1"
+      },
+      "!TEX engine": {
+        "prefix": "!TEX engine",
+        "snippet": "% !TEX engine = $1"
+      },
+      "!TEX program": {
+        "prefix": "!TEX program",
+        "snippet": "% !TEX program = $1"
+      },
+      "!TEX jobname": {
+        "prefix": "!TEX jobname",
+        "snippet": "% !TEX jobname = $1"
+      },
+      "!TEX outputDirectory": {
+        "prefix": "!TEX outputDirectory",
+        "snippet": "% !TEX outputDirectory = $1"
+      },
+      "!TEX cleanPatterns": {
+        "prefix": "!TEX cleanPatterns",
+        "snippet": "% !TEX cleanPatterns = $1"
+      },
+      "\\section{}": {
+        "prefix": "\\section",
+        "snippet": "\\\\section\\{$1\\}$0"
+      },
+      "\\subsection{}": {
+        "prefix": "\\subsection",
+        "snippet": "\\\\subsection\\{$1\\}$0"
+      },
+      "\\subsubsection{}": {
+        "prefix": "\\subsubsection",
+        "snippet": "\\\\subsubsection\\{$1\\}$0"
+      },
+      "\\begin{figure}": {
+        "prefix": "\\figure",
+        "snippet": "\\\\begin{figure}[$1]\n\t\\\\centering\n\t\\\\includegraphics{$2}\n\t\\\\caption{$3}\n\t\\\\label{$4}\n\\\\end{figure}\n$5"
+      },
+      "\\autocite{}": {
+        "prefix": "\\autocite",
+        "snippet": "\\\\autocite{$1}$0"
+      },
+      "\\footenote{}": {
+        "prefix": "\\footnote",
+        "snippet": "\\\\footnote{$1}$0"
+      },
+      "\\footnotemark": {
+        "prefix": "\\footnotemark",
+        "snippet": "\\\\footnotemark"
+      },
+      "\\footnotetext{}": {
+        "prefix": "\\footnotetext",
+        "snippet": "\\\\footnotetext{$1}$0"
+      },
+      "\\mintinline{}": {
+        "prefix": "\\mintinline",
+        "snippet": "\\\\mintinline{$1}$0"
+      },
+      "\\clearpage": {
+        "prefix": "\\clearpage",
+        "snippet": "\\\\clearpage"
+      },
+      "\\newpage": {
+        "prefix": "\\newpage",
+        "snippet": "\\\\newpage"
+      }
+    },
+    "import": {
+      "\\include": {
+        "prefix": "\\include",
+        "snippet": "\\\\include{$1}$0"
+      }
+    },
+    "package": {
+
+    }
+  },
+
+  ".text.tex.latex .string.other.math": {
+    "snippet": {
+      "\\fraction": {
+        "prefix": "\\frac",
+        "snippet": "\\\\frac{$1}{$2}$0",
+        "description": "Display math fraction",
+        "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics"
+      },
+      "\\text": {
+        "prefix": "\\text",
+        "snippet": "\\\\text{$1}$0",
+        "description": "Text in mathmode",
+        "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations"
+      }
+    }
+  }
+}

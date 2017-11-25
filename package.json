@@ -1,0 +1,29 @@
+{
+  "name": "autocomplete-latex",
+  "main": "./lib/autocomplete-latex",
+  "version": "0.0.0",
+  "description": "A provider of LaTeX autocompletions",
+  "keywords": [
+    "latex",
+    "autocomplete"
+  ],
+  "bugs": {
+    "url": "https://mygithub"
+  },
+  "author": "Aerijo",
+  "repository": "https://github.com/atom/autocomplete-latex",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-slick": "^2.0.0"
+  },
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "3.0.0": "getProvider"
+      }
+    }
+  }
+}
