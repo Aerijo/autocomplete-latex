@@ -7,12 +7,6 @@
         "description": "Begin new environment",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
       },
-      "\\usepackage{}": {
-        "prefix": "\\usepackage",
-        "snippet": "\\\\usepackage$2{${1:<package>}}\n$0",
-        "description": "Load a package",
-        "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
-      },
       "\\documentclass{}": {
         "prefix": "\\documentclass",
         "snippet": "\\\\documentclass[${2:optional}]{${1:<class>}}\n$0",
@@ -101,7 +95,12 @@
       }
     },
     "package": {
-
+      "\\usepackage{}": {
+        "prefix": "\\usepackage",
+        "snippet": "\\\\usepackage$2{${1:<package>}}\n$0",
+        "description": "Load a package",
+        "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
+      }
     }
   },
 
