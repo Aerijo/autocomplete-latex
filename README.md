@@ -1,7 +1,7 @@
 # autocomplete-latex
 
 ## Installing
-Run `apm install autocomplete-latex` or through atom's builtin package manager. (NOTE: not actually published yet!)
+Run `apm install autocomplete-latex` or through atom's builtin package manager.
 
 ## Adding completions
 Look in docs for format, feature not currently availible.
