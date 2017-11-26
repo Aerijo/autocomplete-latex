@@ -6,16 +6,29 @@ At startup, it will read in completions from the provided `completions.json` fil
 The `loadProperties` function handles this, and `completions.json` is of the form
 ```
 {
-  "scope": {
-    "displayText": {
-      "prefix": "what the user types to see this snippet",
-      "snippet": "what the snippet will expand into"
-      "description": "(optional) describes what the snippet is for"
-      "descriptionMoreURL": "(optional) URL for more info"
+  "scope": { // eg. "text.tex.latex"
+    "type": { // eg. "snippet"
+      "keyName": { // (not really important)
+        // required
+        "prefix": "what the user types to see this snippet",
+        "snippet": "what the snippet will expand into"
+
+        // optional
+        "description": "(optional) describes what the snippet is for"
+        "descriptionMoreURL": "(optional) URL for more info"
+        "leftLabel": "appears to the left",
+        "leftlabelHTML": "more complicated form",
+        "rightLabel": "appears to right",
+        "rightLabelHTML": "more complicated form",
+        "className": "? see API for more info",
+        "iconHTML": "ditto",
+        "characterMatchIndices": [ditto]
+      }
     }
   }
 }
 ```
+Most of these entries are defined in the [provider API](https://github.com/atom/autocomplete-plus/wiki/Provider-API#suggestions). Some are slightly different, so they may get new names in time (I will try to ensure backwards compatibility when custom completions are supported).
 
 Eventually, it can be made to look for completion sources from custom files, allowing greater customisation.
 
@@ -24,11 +37,14 @@ When obtaining relevant suggestions, the provider will do the following:
 - Check the current scope against the array of observed scopes
 - Add the type and completion of each suggestion in a matching scope to the array that will be returned when finished
 
-### Provided variables
+### Variables provided by `autocomplete-plus`
 - `editor`: instance of TextEditor class
 - `bufferPosition`: object with row and col of cursor
 - `scopeDescriptor`: object with `scope` property that holds an array of current scopes
+- `prefix`: string of prefix characters as determined by `autocomplete-plus`: not used, as `\` can only be found using a custom prefix.
+- `activated-manually`: not used, as irrelevant.
 
 
 ## todo:
-- Make the magic comment prefixes like `!root` (as opposed to `!TEX root`) to make it easier to get the right one.
+- ~~Make the magic comment prefixes like `!root` (as opposed to `!TEX root`) to make it easier to get the right one.~~
+  - Not necessary; [`fuzzaldrin-plus`](https://github.com/jeancroy/fuzz-aldrin-plus) ensures these fuzzy matches still appear
