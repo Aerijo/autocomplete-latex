@@ -8,10 +8,10 @@
     "autocomplete"
   ],
   "bugs": {
-    "url": "https://mygithub"
+    "url": "https://github.com/Aerijo/autocomplete-latex/issues"
   },
   "author": "Aerijo",
-  "repository": "https://github.com/atom/autocomplete-latex",
+  "repository": "https://github.com/Aerijo/autocomplete-latex",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
