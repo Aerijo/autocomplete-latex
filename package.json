@@ -21,7 +21,6 @@
     "language-latex2e:grammar-used"
   ],
   "dependencies": {
-    "atom-slick": "^2.0.0",
     "fuzzaldrin-plus": "^0.6.0"
   },
   "providedServices": {
