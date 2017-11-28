@@ -2,101 +2,101 @@
   ".text.tex.latex": {
     "snippet": [
       {
-        "prefix": "\\begin",
+        "displayText": "\\begin",
         "snippet": "\\\\begin{${1:env}}$2\n\t$0\n\\\\end{${1:env}}",
         "description": "Begin new environment",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
       },
       {
-        "prefix": "\\documentclass",
+        "displayText": "\\documentclass",
         "snippet": "\\\\documentclass[${2:optional}]{${1:<class>}}\n$0",
         "description": "Set document class",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
       },
       {
-        "prefix": "\\align",
+        "displayText": "\\align",
         "snippet": "\\%\n\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
         "description": "Begin amsmath align environment",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
       },
       {
-        "prefix": "!TEX root",
+        "displayText": "!TEX root",
         "snippet": "% !TEX root = $1"
       },
       {
-        "prefix": "!TEX engine",
+        "displayText": "!TEX engine",
         "snippet": "% !TEX engine = $1"
       },
       {
-        "prefix": "!TEX program",
+        "displayText": "!TEX program",
         "snippet": "% !TEX program = $1"
       },
       {
-        "prefix": "!TEX jobname",
+        "displayText": "!TEX jobname",
         "snippet": "% !TEX jobname = $1"
       },
       {
-        "prefix": "!TEX outputDirectory",
+        "displayText": "!TEX outputDirectory",
         "snippet": "% !TEX outputDirectory = $1"
       },
       {
-        "prefix": "!TEX cleanPatterns",
+        "displayText": "!TEX cleanPatterns",
         "snippet": "% !TEX cleanPatterns = $1"
       },
       {
-        "prefix": "\\section",
+        "displayText": "\\section",
         "snippet": "\\\\section\\{$1\\}$0"
       },
       {
-        "prefix": "\\subsection",
+        "displayText": "\\subsection",
         "snippet": "\\\\subsection\\{$1\\}$0"
       },
       {
-        "prefix": "\\subsubsection",
+        "displayText": "\\subsubsection",
         "snippet": "\\\\subsubsection\\{$1\\}$0"
       },
       {
-        "prefix": "\\figure",
+        "displayText": "\\figure",
         "snippet": "\\\\begin{figure}[$1]\n\t\\\\centering\n\t\\\\includegraphics{$2}\n\t\\\\caption{$3}\n\t\\\\label{$4}\n\\\\end{figure}\n$5"
       },
       {
-        "prefix": "\\autocite",
+        "displayText": "\\autocite",
         "snippet": "\\\\autocite{$1}$0"
       },
       {
-        "prefix": "\\footnote",
+        "displayText": "\\footnote",
         "snippet": "\\\\footnote{$1}$0"
       },
       {
-        "prefix": "\\footnotemark",
+        "displayText": "\\footnotemark",
         "snippet": "\\\\footnotemark"
       },
       {
-        "prefix": "\\footnotetext",
+        "displayText": "\\footnotetext",
         "snippet": "\\\\footnotetext{$1}$0"
       },
       {
-        "prefix": "\\mintinline",
+        "displayText": "\\mintinline",
         "snippet": "\\\\mintinline{$1}$0"
       },
       {
-        "prefix": "\\clearpage",
+        "displayText": "\\clearpage",
         "snippet": "\\\\clearpage"
       },
       {
-        "prefix": "\\newpage",
+        "displayText": "\\newpage",
         "snippet": "\\\\newpage"
       }
     ],
     "import": [
       {
-        "prefix": "\\include",
+        "displayText": "\\include",
         "snippet": "\\\\include{$1}$0"
       }
     ],
     "package": [
       {
-        "prefix": "\\usepackage",
+        "displayText": "\\usepackage",
         "snippet": "\\\\usepackage$2{${1:<package>}}\n$0",
         "description": "Load a package",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
@@ -107,13 +107,13 @@
   ".text.tex.latex .string.other.math": {
     "snippet": [
       {
-        "prefix": "\\frac",
+        "displayText": "\\frac",
         "snippet": "\\\\frac{$1}{$2}$0",
         "description": "Display math fraction",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics"
       },
       {
-        "prefix": "\\text",
+        "displayText": "\\text",
         "snippet": "\\\\text{$1}$0",
         "description": "Text in mathmode",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations"
