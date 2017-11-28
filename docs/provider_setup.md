@@ -7,10 +7,9 @@ The `loadProperties` function handles this, and `completions.json` is of the for
 ```
 {
   "scope": { // eg. "text.tex.latex"
-    "type": { // eg. "snippet"
-      "keyName": { // (not really important) --- maybe turn into array?
+    "type": [ // eg. "snippet"
         // required
-        "prefix": "what the user types to see this snippet",
+        "displayText": "what the user types to see this snippet",
         "snippet": "what the snippet will expand into"
 
         // optional
@@ -23,8 +22,11 @@ The `loadProperties` function handles this, and `completions.json` is of the for
         "className": "? see API for more info",
         "iconHTML": "ditto",
         "characterMatchIndices": [ditto]
+
+        // additional optional
+        "replacementPrefix": "/regex/ not really required to know / use. Just in here to fully support provider options."
       }
-    }
+    ]
   }
 }
 ```
@@ -47,8 +49,6 @@ When obtaining relevant suggestions, the provider will do the following:
 
 ## todo:
 - ~~Make the magic comment prefixes like `!root` (as opposed to `!TEX root`) to make it easier to get the right one.~~
-  - Not necessary; [`fuzzaldrin-plus`](https://github.com/jeancroy/fuzz-aldrin-plus) ensures these fuzzy matches still appear
-
-- Turn last keys of completion json into an array, as keynames are not important in this setup.
+  - Not necessary; [`fuzzaldrin-plus`](https://github.com/jeancroy/fuzz-aldrin-plus) ensures these fuzzy matches still appear. 
 
 - Optimise (but only after everything works)
