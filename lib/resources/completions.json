@@ -20,27 +20,27 @@
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
       },
       {
-        "displayText": "!TEX root",
+        "displayText": "!root",
         "snippet": "% !TEX root = $1"
       },
       {
-        "displayText": "!TEX engine",
+        "displayText": "!engine",
         "snippet": "% !TEX engine = $1"
       },
       {
-        "displayText": "!TEX program",
+        "displayText": "!program",
         "snippet": "% !TEX program = $1"
       },
       {
-        "displayText": "!TEX jobname",
+        "displayText": "!jobname",
         "snippet": "% !TEX jobname = $1"
       },
       {
-        "displayText": "!TEX outputDirectory",
+        "displayText": "!outputDirectory",
         "snippet": "% !TEX outputDirectory = $1"
       },
       {
-        "displayText": "!TEX cleanPatterns",
+        "displayText": "!cleanPatterns",
         "snippet": "% !TEX cleanPatterns = $1"
       },
       {
