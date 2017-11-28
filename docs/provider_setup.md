@@ -48,7 +48,4 @@ When obtaining relevant suggestions, the provider will do the following:
 
 
 ## todo:
-- ~~Make the magic comment prefixes like `!root` (as opposed to `!TEX root`) to make it easier to get the right one.~~
-  - Not necessary; [`fuzzaldrin-plus`](https://github.com/jeancroy/fuzz-aldrin-plus) ensures these fuzzy matches still appear. 
-
 - Optimise (but only after everything works)
