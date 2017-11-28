@@ -60,7 +60,7 @@ To define your own completions, see [Adding completions](#adding-completions)
 In the settings view, there are several options available to customise how this package works. If changing a setting does not appear to work, try restarting Atom.
 
 #### Disabled scopes
-A list of scopes where you do not want to see completions from this package. To know which scopes to use, run the command `editor:log-cursor-scope` in the cammand palette. The notification that pops up will list the current scopes of the cursor. For example, doing this in a commented section might give the following scopes:
+A list of scopes where you do not want to see completions from this package. To know which scopes to use, run the command `editor:log-cursor-scope` in the command palette. The notification that pops up will list the current scopes of the cursor. For example, doing this in a commented section might give the following scopes:
 - `text.tex.latex`
 - `comment.line.percentage.latex`
 
