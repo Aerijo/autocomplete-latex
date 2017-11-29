@@ -47,9 +47,11 @@ You don't need to configure anything to get started; this package will work out 
 ### In document
 As mentioned above, completions will automatically appear when typing. These suggestions are filtered and ranked according to the prefix, which is defined as a `\` followed by any number of letters (`\\[a-zA-Z]*` for you [regex](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) fans) up until the cursor. If any non-letters are present (eg. number or space) it will no longer show the completions and will wait until a vaild prefix is reached again.
 
-  - Note: it will also activate immediately after a `!`. This is to support [magic comment](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding) completions as well.
+  - **Note**: it will also activate immediately after a `!`. This is to support [magic comment](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding) completions as well.
 
 The current scope also affects which completions appear, so you'll only see commands like `\frac` as an option when in math mode.
+
+ - **Tip**: the completions will appear if the current prefix is an ordered subset of the potential completion. This means that while you _could_ type `\subsub` to get the `\subsubsection` completion, you could just type `\sbb` instead.
 
 If something unexpected is occuring, check your [settings](#settings). Make sure all the [requirements](#requirements) are also met. If the issue persists, [open an issue](https://github.com/Aerijo/autocomplete-latex/issues) on the repo page and I'll try to help. It's still a young package, so I wouldn't expect it to be perfect (yet :wink:).
 
@@ -83,7 +85,7 @@ will disable completions if the current scope is part of a comment or in math mo
 This option allows you to disable the default completions. This may be preferable if you have a highly customised setup. Note that user completions will appear above the default completions if both share the same display text.
 
 #### Minimum prefix length
-Determines how long the prefix must be until suggestions will appear. Default value is equal to the one set for `autocomplete-plus`. Making it greater will reduce noise, but lessen effectiveness.
+Determines how long the prefix must be until suggestions will appear. Default value is `2`. Making it greater will reduce noise, but decrease effectiveness (because lessening typing is what this is all about; that, and reducing typos).
 
 #### User completions path
 Use this to provide the path to your own completions. Ensure it is an absolute path, and that you include the file extension as well (should be `.json`).
@@ -94,4 +96,25 @@ Use this to provide the path to your own completions. Ensure it is an absolute p
 - Note: I'm still not satisfied with the current format. Expect it to continue to change to make organising related sections better.
   - Eg. I want to be able to make groups that can be enabled/disabled easily.
 
-- Also, the file can be `.js` as well, so long as it's export is an object with the same properties of the `.json`.
+- Also, the file can be `.js` as well, so long as it's export is an object with the same properties of the `.json`. Eg.
+
+```js
+// in file userCompletions.js
+const completions = {};
+/*
+  some javascript code
+*/
+completions[".text.tex.latex"] = {
+  "snippet": [
+    {
+      "displayText": "\\myCompletion",
+      "snippet": "\\\\expands to string of text and places cursor here -> $1 <-",
+      "description": "Example completion"
+    }
+  ]
+}
+/*
+  other javascript code
+*/
+module.exports = completions
+```
