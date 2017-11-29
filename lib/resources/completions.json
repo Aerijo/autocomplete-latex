@@ -1,6 +1,6 @@
 {
   ".text.tex.latex": {
-    "snippet": [
+    "property": [
       {
         "displayText": "!cleanPatterns",
         "snippet": "% !TEX cleanPatterns = $1",
@@ -55,7 +55,9 @@
         "displayText": "!root",
         "snippet": "% !TEX root = $1",
         "description": "Specify the root file that should be built"
-      },
+      }
+    ],
+    "snippet": [
       {
         "displayText": "\\begin",
         "snippet": "\\\\begin{${1:env}}$2\n\t$3\n\\\\end{${1:env}}",
