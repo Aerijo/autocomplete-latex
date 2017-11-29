@@ -125,6 +125,10 @@
       {
         "displayText": "\\include",
         "snippet": "\\\\include{$1}$2"
+      },
+      {
+        "displayText": "\\input",
+        "snippet": "\\\\input{$1}$2"
       }
     ],
     "package": [
