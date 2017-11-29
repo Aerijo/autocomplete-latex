@@ -2,6 +2,61 @@
   ".text.tex.latex": {
     "snippet": [
       {
+        "displayText": "!cleanPatterns",
+        "snippet": "% !TEX cleanPatterns = $1",
+        "description": "Specify patterns to use for latex:clean"
+      },
+      {
+        "displayText": "!enableSynctex",
+        "snippet": "% !TEX enableSynctex = $1",
+        "description": "Override synctex setting"
+      },
+      {
+        "displayText": "!enableExtendedBuildMode",
+        "snippet": "% !TEX enableExtendedBuildMode = $1",
+        "description": "Override extended build mode setting"
+      },
+      {
+        "displayText": "!enableShellEscape",
+        "snippet": "% !TEX enableShellEscape = $1",
+        "description": "Override shell escape setting"
+      },
+      {
+        "displayText": "!engine",
+        "snippet": "% !TEX engine = $1",
+        "description": "Set engine to compile with"
+      },
+      {
+        "displayText": "!moveResultToSourceDirectory",
+        "snippet": "% !TEX moveResultToSourceDirectory = $1",
+        "description": "Override move result to source directory setting"
+      },
+      {
+        "displayText": "!outputFormat",
+        "snippet": "% !TEX outputFormat = $1",
+        "description": "Override the output format"
+      },
+      {
+        "displayText": "!jobNames",
+        "snippet": "% !TEX jobNames = $1",
+        "description": "Control the number and names of build jobs"
+      },
+      {
+        "displayText": "!outputDirectory",
+        "snippet": "% !TEX outputDirectory = $1",
+        "description": "Specify the output directory that should be used"
+      },
+      {
+        "displayText": "!producer",
+        "snippet": "% !TEX producer = $1",
+        "description": "Override the PDF producer"
+      },
+      {
+        "displayText": "!root",
+        "snippet": "% !TEX root = $1",
+        "description": "Specify the root file that should be built"
+      },
+      {
         "displayText": "\\begin",
         "snippet": "\\\\begin{${1:env}}$2\n\t$3\n\\\\end{${1:env}}",
         "description": "Begin new environment",
@@ -9,7 +64,7 @@
       },
       {
         "displayText": "\\documentclass",
-        "snippet": "\\\\documentclass[${2:optional}]{${1:class}}\n$3",
+        "snippet": "\\\\documentclass${2}{${1:class}}\n$3",
         "description": "Set document class",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
       },
@@ -18,30 +73,6 @@
         "snippet": "\\%\n\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
         "description": "Begin amsmath align environment",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
-      },
-      {
-        "displayText": "!root",
-        "snippet": "% !TEX root = $1"
-      },
-      {
-        "displayText": "!engine",
-        "snippet": "% !TEX engine = $1"
-      },
-      {
-        "displayText": "!program",
-        "snippet": "% !TEX program = $1"
-      },
-      {
-        "displayText": "!jobname",
-        "snippet": "% !TEX jobname = $1"
-      },
-      {
-        "displayText": "!outputDirectory",
-        "snippet": "% !TEX outputDirectory = $1"
-      },
-      {
-        "displayText": "!cleanPatterns",
-        "snippet": "% !TEX cleanPatterns = $1"
       },
       {
         "displayText": "\\section",
