@@ -59,6 +59,11 @@ To define your own completions, see [Adding completions](#adding-completions)
 ### Settings
 In the settings view, there are several options available to customise how this package works. If changing a setting does not appear to work, try restarting Atom.
 
+#### Completion regex
+If you don't know what [`regex`](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) is, don't touch this setting. If you change it, make sure to put it back to the default. You've been warned.
+
+If you know what you're doing, this setting determines which characters are considered a valid prefix to the completion. The `$` represents the current cursor position, and it can look back as far as the beginning of the line.
+
 #### Disabled scopes
 A list of scopes where you do not want to see completions from this package. To know which scopes to use, run the command `editor:log-cursor-scope` in the command palette. The notification that pops up will list the current scopes of the cursor. For example, doing this in a commented section might give the following scopes:
 - `text.tex.latex`
