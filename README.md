@@ -75,7 +75,7 @@ will suppress completions when both scopes are present. Similarly, `comma` separ
 will disable completions if the current scope is part of a comment or in math mode. (Note: if you want to disable all math snippets, `.string.other.math` will disable for both inline AND display).
 
 #### Enable default completions
-This option allows you to disable the default completions. This may be preferable if you have a highly customised setup.
+This option allows you to disable the default completions. This may be preferable if you have a highly customised setup. Note that user completions will appear above the default completions if both share the same display text.
 
 #### Minimum prefix length
 Determines how long the prefix must be until suggestions will appear. Default value is equal to the one set for `autocomplete-plus`. Making it greater will reduce noise, but lessen effectiveness.
@@ -85,4 +85,8 @@ Use this to provide the path to your own completions. Ensure it is an absolute p
 
 
 ### Adding completions
-Look in docs for format.
+**Not stable**: Look in docs for current format.
+- Note: I'm still not satisfied with the current format. Expect it to continue to change to make organising related sections better.
+  - Eg. I want to be able to make groups that can be enabled/disabled easily.
+
+- Also, the file can be `.js` as well, so long as it's export is an object with the same properties of the `.json`.
