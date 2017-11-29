@@ -3,13 +3,13 @@
     "snippet": [
       {
         "displayText": "\\begin",
-        "snippet": "\\\\begin{${1:env}}$2\n\t$0\n\\\\end{${1:env}}",
+        "snippet": "\\\\begin{${1:env}}$2\n\t$3\n\\\\end{${1:env}}",
         "description": "Begin new environment",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
       },
       {
         "displayText": "\\documentclass",
-        "snippet": "\\\\documentclass[${2:optional}]{${1:<class>}}\n$0",
+        "snippet": "\\\\documentclass[${2:optional}]{${1:class}}\n$3",
         "description": "Set document class",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
       },
@@ -45,15 +45,15 @@
       },
       {
         "displayText": "\\section",
-        "snippet": "\\\\section\\{$1\\}$0"
+        "snippet": "\\\\section\\{$1\\}$2"
       },
       {
         "displayText": "\\subsection",
-        "snippet": "\\\\subsection\\{$1\\}$0"
+        "snippet": "\\\\subsection\\{$1\\}$2"
       },
       {
         "displayText": "\\subsubsection",
-        "snippet": "\\\\subsubsection\\{$1\\}$0"
+        "snippet": "\\\\subsubsection\\{$1\\}$2"
       },
       {
         "displayText": "\\figure",
@@ -61,11 +61,11 @@
       },
       {
         "displayText": "\\autocite",
-        "snippet": "\\\\autocite{$1}$0"
+        "snippet": "\\\\autocite{$1}$2"
       },
       {
         "displayText": "\\footnote",
-        "snippet": "\\\\footnote{$1}$0"
+        "snippet": "\\\\footnote{$1}$2"
       },
       {
         "displayText": "\\footnotemark",
@@ -73,11 +73,11 @@
       },
       {
         "displayText": "\\footnotetext",
-        "snippet": "\\\\footnotetext{$1}$0"
+        "snippet": "\\\\footnotetext{$1}$2"
       },
       {
         "displayText": "\\mintinline",
-        "snippet": "\\\\mintinline{$1}$0"
+        "snippet": "\\\\mintinline{$1}$2"
       },
       {
         "displayText": "\\clearpage",
@@ -91,13 +91,13 @@
     "import": [
       {
         "displayText": "\\include",
-        "snippet": "\\\\include{$1}$0"
+        "snippet": "\\\\include{$1}$2"
       }
     ],
     "package": [
       {
         "displayText": "\\usepackage",
-        "snippet": "\\\\usepackage$2{${1:<package>}}\n$0",
+        "snippet": "\\\\usepackage$2{${1:<package>}}\n$3",
         "description": "Load a package",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
       }
@@ -108,13 +108,13 @@
     "snippet": [
       {
         "displayText": "\\frac",
-        "snippet": "\\\\frac{$1}{$2}$0",
+        "snippet": "\\\\frac{$1}{$2}$3",
         "description": "Display math fraction",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics"
       },
       {
         "displayText": "\\text",
-        "snippet": "\\\\text{$1}$0",
+        "snippet": "\\\\text{$1}$2",
         "description": "Text in mathmode",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations"
       }
