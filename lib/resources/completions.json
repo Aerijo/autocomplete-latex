@@ -65,60 +65,14 @@
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
       },
       {
-        "displayText": "\\documentclass",
-        "snippet": "\\\\documentclass${2}{${1:class}}\n$3",
-        "description": "Set document class",
-        "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
-      },
-      {
         "displayText": "\\align",
         "snippet": "\\%\n\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
         "description": "Begin amsmath align environment",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
       },
       {
-        "displayText": "\\section",
-        "snippet": "\\\\section\\{$1\\}$2"
-      },
-      {
-        "displayText": "\\subsection",
-        "snippet": "\\\\subsection\\{$1\\}$2"
-      },
-      {
-        "displayText": "\\subsubsection",
-        "snippet": "\\\\subsubsection\\{$1\\}$2"
-      },
-      {
         "displayText": "\\figure",
         "snippet": "\\\\begin{figure}[$1]\n\t\\\\centering\n\t\\\\includegraphics{$2}\n\t\\\\caption{$3}\n\t\\\\label{$4}\n\\\\end{figure}\n$5"
-      },
-      {
-        "displayText": "\\autocite",
-        "snippet": "\\\\autocite{$1}$2"
-      },
-      {
-        "displayText": "\\footnote",
-        "snippet": "\\\\footnote{$1}$2"
-      },
-      {
-        "displayText": "\\footnotemark",
-        "snippet": "\\\\footnotemark"
-      },
-      {
-        "displayText": "\\footnotetext",
-        "snippet": "\\\\footnotetext{$1}$2"
-      },
-      {
-        "displayText": "\\mintinline",
-        "snippet": "\\\\mintinline{$1}$2"
-      },
-      {
-        "displayText": "\\clearpage",
-        "snippet": "\\\\clearpage"
-      },
-      {
-        "displayText": "\\newpage",
-        "snippet": "\\\\newpage"
       },
       {
         "displayText": "\\itemize",
@@ -152,6 +106,54 @@
         "snippet": "\\\\usepackage$2{${1:<package>}}\n$3",
         "description": "Load a package",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
+      }
+    ],
+    "method": [
+      {
+        "displayText": "\\section",
+        "snippet": "\\\\section\\{$1\\}$2"
+      },
+      {
+        "displayText": "\\subsection",
+        "snippet": "\\\\subsection\\{$1\\}$2"
+      },
+      {
+        "displayText": "\\subsubsection",
+        "snippet": "\\\\subsubsection\\{$1\\}$2"
+      },
+      {
+        "displayText": "\\autocite",
+        "snippet": "\\\\autocite{$1}$2"
+      },
+      {
+        "displayText": "\\footnote",
+        "snippet": "\\\\footnote{$1}$2"
+      },
+      {
+        "displayText": "\\footnotemark",
+        "snippet": "\\\\footnotemark"
+      },
+      {
+        "displayText": "\\footnotetext",
+        "snippet": "\\\\footnotetext{$1}$2"
+      },
+      {
+        "displayText": "\\mintinline",
+        "snippet": "\\\\mintinline{$1}$2"
+      },
+      {
+        "displayText": "\\clearpage",
+        "snippet": "\\\\clearpage"
+      },
+      {
+        "displayText": "\\newpage",
+        "snippet": "\\\\newpage"
+      },
+      {
+        "displayText": "\\documentclass",
+        "snippet": "\\\\documentclass${2}{${1:class}}\n$3",
+        "description": "Set document class",
+        "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
       }
     ]
   },
