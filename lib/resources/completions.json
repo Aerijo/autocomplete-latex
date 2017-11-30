@@ -119,6 +119,21 @@
       {
         "displayText": "\\newpage",
         "snippet": "\\\\newpage"
+      },
+      {
+        "displayText": "\\itemize",
+        "snippet": "\\\\begin{itemize}\n\t\\\\item $1\n\\\\end{itemize}$2",
+        "description": "Bullet point list"
+      },
+      {
+        "displayText": "\\enumerate",
+        "snippet": "\\\\begin{enumerate}\n\t\\\\item $1\n\\\\end{enumerate}$2",
+        "description": "Enumerated list"
+      },
+      {
+        "displayText": "\\description",
+        "snippet": "\\\\begin{description}\n\t\\\\item [$1] $2\n\\\\end{description}$3",
+        "description": "Descriptive list"
       }
     ],
     "import": [
