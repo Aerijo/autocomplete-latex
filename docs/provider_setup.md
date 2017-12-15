@@ -49,3 +49,6 @@ When obtaining relevant suggestions, the provider will do the following:
 
 ## todo:
 - Optimise (but only after everything works)
+- Separate completions by package
+  - Give user option to automatically detect packages, or to manually select.
+- (primitively) detect new user commands defined with `[egx]def` or `let`
