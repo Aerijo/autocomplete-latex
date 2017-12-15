@@ -15,6 +15,8 @@
 ## About
 This package is intended to be used with [Atom](https://atom.io).
 
+- **Note**: This package is compatible with ['latex-autocomplete'](https://atom.io/packages/latex-autocomplete) and does not necessarily replace it's functionality. They perform different types of autocompleting. Both can be enabled simultaneously without conflict.
+
 It provides a range of customisable "completions" that appear when typing a command. When one is selected, it will expand to a predefined snippet of text that can then be used like normal.
 
 The benefits of this package include reduced [boilerplate](https://en.wikipedia.org/wiki/Boilerplate_code) code and fewer errors (especially for LaTeX beginners). For example, one of the default completions prefixes is `\figure`. Expanding this results in the following text insertion:
@@ -29,6 +31,11 @@ The benefits of this package include reduced [boilerplate](https://en.wikipedia.
 with the cursor placing itself between the first optional brackets. Pressing `tab` then cycles through the bracket pairs, enabling quick and easy figure insertion.
 
 This functionality may already be present as snippets from other packages. However, there are certain things this package can do that are difficult or impossible to do with snippets. Some are aesthetic, but others include better scope parsing and customisability.
+
+## Why use this package?
+Presumably, you're here because you want to be able to autocomplete common commands you use. Yes, snippets can do this, but they can be difficult to remember, especially if used infrequently. `autocomplete-snippets` is a handy package that displays most snippets in a popup as you type, but it has one major flaw when it comes to LaTeX documents: it doesn't support punctuation.
+
+Most of what you type in LaTeX is just regular words. It gets annoying when you're typing, and a popup menu appears every other word. This package only shows suggestions when a `\` is typed; this makes completions easy to access but kept out of the way during normal use.
 
 ## Installation
 To install, run `apm install autocomplete-latex` or find it in Atom's builtin package manager.
@@ -110,6 +117,13 @@ completions[".text.tex.latex"] = {
       "displayText": "\\myCompletion",
       "snippet": "\\\\expands to string of text and places cursor here -> $1 <-",
       "description": "Example completion"
+    },
+    {
+      "comment": "Though not recommended, type can be explicitly overridden",
+      "type": "constant",
+      "displayText": "\\LaTeX",
+      "snippet": "\\{\\\\LaTeX\\}$1",
+      "description": "Builtin LaTeX command + protective braces"
     }
   ]
 }
