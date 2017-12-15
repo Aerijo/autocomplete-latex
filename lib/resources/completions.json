@@ -171,6 +171,11 @@
         "snippet": "\\\\text{$1}$2",
         "description": "Text in mathmode",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations"
+      },
+      {
+        "displayText": "\\sum",
+        "snippet": "\\\\sum^{$1}_{$2}$3",
+        "description": "Sum with limits"
       }
     ]
   }
