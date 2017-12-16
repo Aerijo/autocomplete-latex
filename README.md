@@ -1,3 +1,4 @@
+[See this on atom.io](https://atom.io/packages/autocomplete-latex)
 # autocomplete-latex
 
 ## Table of contents
