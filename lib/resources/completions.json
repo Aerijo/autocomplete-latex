@@ -55,6 +55,11 @@
         "displayText": "!root",
         "snippet": "% !TEX root = $1",
         "description": "Specify the root file that should be built"
+      },
+      {
+        "displayText": "!syntax",
+        "snippet": "% !TEX syntax = $1",
+        "description": "Change the current syntax highlighting"
       }
     ],
     "snippet": [
@@ -174,8 +179,13 @@
       },
       {
         "displayText": "\\sum",
-        "snippet": "\\\\sum^{$1}_{$2}$3",
+        "snippet": "\\\\sum_{$1}^{$2}$3",
         "description": "Sum with limits"
+      },
+      {
+        "displayText": "\\int",
+        "snippet": "\\\\int_{$1}^{$2}$3",
+        "description": "Integral with limits"
       }
     ]
   }
