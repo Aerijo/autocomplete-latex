@@ -60,6 +60,11 @@
         "displayText": "!syntax",
         "snippet": "% !TEX syntax = $1",
         "description": "Change the current syntax highlighting"
+      },
+      {
+        "displayText": "!bib",
+        "snippet": "% !TEX bib = $1",
+        "description": "Specify bibliography file path"
       }
     ],
     "snippet": [
