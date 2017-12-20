@@ -39,6 +39,9 @@ When obtaining relevant suggestions, the provider will do the following:
 - Check the current scope against the array of observed scopes
 - Add the type and completion of each suggestion in a matching scope to the array that will be returned when finished
 
+## Citation completions
+Recently added support for `@...` citation shorthand syntax; it will expand to `\autocite{...}`, or any other control word the user sets. Implementation is synchronous and brute force: there is plenty of room for improvement by caching results and such.
+
 ### Variables provided by `autocomplete-plus`
 - `editor`: instance of TextEditor class
 - `bufferPosition`: object with row and col of cursor
