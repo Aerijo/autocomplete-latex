@@ -98,6 +98,10 @@
         "displayText": "\\description",
         "snippet": "\\\\begin{description}\n\t\\\\item [$1] $2\n\\\\end{description}$3",
         "description": "Descriptive list"
+      },
+      {
+        "displayText": "\\tikzpicture",
+        "snippet": "\\\\begin{tikzpicture}\n\t$1\n\\\\end{tikzpicture}"
       }
     ],
     "import": [
