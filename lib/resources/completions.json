@@ -137,7 +137,7 @@
       },
       {
         "displayText": "\\autocite",
-        "snippet": "\\\\autocite{$1}$2"
+        "snippet": "\\\\autocite$2{$1}$3"
       },
       {
         "displayText": "\\footnote",
@@ -195,6 +195,22 @@
         "displayText": "\\int",
         "snippet": "\\\\int_{$1}^{$2}$3",
         "description": "Integral with limits"
+      }
+    ]
+  },
+
+  ".text.tex.latex.tikz": {
+    "snippet": [
+      {
+        "displayText": "\\path",
+        "snippet": "\\\\path\\[$1\\]$2",
+        "description": "Path command"
+      },
+      {
+        "displayText": "\\node",
+        "snippet": "\\\\node",
+        "description": "Node command",
+        "rightLabelHTML": "Alias for <code>\\path node</code>"
       }
     ]
   }
