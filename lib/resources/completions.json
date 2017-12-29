@@ -199,8 +199,8 @@
     ]
   },
 
-  ".text.tex.latex.tikz": {
-    "snippet": [
+  ".text.tex.latex.tikz, source.embedded.tikz": {
+    "method": [
       {
         "displayText": "\\path",
         "snippet": "\\\\path\\[$1\\]$2",
@@ -211,6 +211,78 @@
         "snippet": "\\\\node",
         "description": "Node command",
         "rightLabelHTML": "Alias for <code>\\path node</code>"
+      },
+      {
+        "displayText": "\\coordinate",
+        "snippet": "\\\\coordinate",
+        "description": "Coordinate command",
+        "rightLabelHTML": "Alias for <code>\\path coordinate</code>"
+      },
+      {
+        "displayText": "\\pic",
+        "snippet": "\\\\pic",
+        "description": "Pic command",
+        "rightLabelHTML": "Alias for <code>\\path pic</code>"
+      },
+      {
+        "displayText": "\\graph",
+        "snippet": "\\\\graph",
+        "description": "Graph command",
+        "rightLabelHTML": "Alias for <code>\\path graph</code>"
+      },
+      {
+        "displayText": "\\matrix",
+        "snippet": "\\\\matrix",
+        "description": "Matrix command",
+        "rightLabelHTML": "Alias for <code>\\path node [matrix]</code>"
+      },
+      {
+        "displayText": "\\fill",
+        "snippet": "\\\\fill",
+        "description": "Fill command",
+        "rightLabelHTML": "Alias for <code>\\path [fill]</code>"
+      },
+      {
+        "displayText": "\\filldraw",
+        "snippet": "\\\\filldraw",
+        "description": "Filldraw command",
+        "rightLabelHTML": "Alias for <code>\\path [fill, draw]</code>"
+      },
+      {
+        "displayText": "\\draw",
+        "snippet": "\\\\draw",
+        "description": "Draw command",
+        "rightLabelHTML": "Alias for <code>\\path [draw]</code>"
+      },
+      {
+        "displayText": "\\pattern",
+        "snippet": "\\\\pattern",
+        "description": "Pattern command",
+        "rightLabelHTML": "Alias for <code>\\path [pattern]</code>"
+      },
+      {
+        "displayText": "\\shade",
+        "snippet": "\\\\shade",
+        "description": "Shade command",
+        "rightLabelHTML": "Alias for <code>\\path [shade]</code>"
+      },
+      {
+        "displayText": "\\shadedraw",
+        "snippet": "\\\\shadedraw",
+        "description": "Shadedraw command",
+        "rightLabelHTML": "Alias for <code>\\path [shade, draw]</code>"
+      },
+      {
+        "displayText": "\\clip",
+        "snippet": "\\\\clip",
+        "description": "Clip command",
+        "rightLabelHTML": "Alias for <code>\\path [clip]</code>"
+      },
+      {
+        "displayText": "\\useasboundingbox",
+        "snippet": "\\\\useasboundingbox",
+        "description": "Use as bounding box command",
+        "rightLabelHTML": "Alias for <code>\\path [use as bounding box]</code>"
       }
     ]
   }
