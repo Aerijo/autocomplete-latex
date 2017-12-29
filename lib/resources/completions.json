@@ -168,6 +168,86 @@
         "snippet": "\\\\documentclass${2}{${1:class}}\n$3",
         "description": "Set document class",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
+      },
+      {
+        "displayText": "\\tracingmacros",
+        "snippet": "\\\\tracingmacros=$1",
+        "description": "Write all macro expansions to the log file"
+      },
+      {
+        "displayText": "\\tracingcommands",
+        "snippet": "\\\\tracingcommands=$1",
+        "description": "Write all commands to the log file"
+      },
+      {
+        "displayText": "\\tracinglostchars",
+        "snippet": "\\\\tracinglostchars=$1",
+        "description": "Write missing characters to the log file"
+      },
+      {
+        "displayText": "\\tracingonline",
+        "snippet": "\\\\tracingonline=$1",
+        "description": "Write disgnostic info to terminal as well"
+      },
+      {
+        "displayText": "\\tracingoutput",
+        "snippet": "\\\\tracingoutput=$1",
+        "description": "Write shipped box content to log file"
+      },
+      {
+        "displayText": "\\tracingpages",
+        "snippet": "\\\\tracingpages=$1",
+        "description": "Write page cost calculations to log file"
+      },
+      {
+        "displayText": "\\tracingparagraphs",
+        "snippet": "\\\\tracingparagraphs=$1",
+        "description": "Write line breaking calculations to log file"
+      },
+      {
+        "displayText": "\\tracingrestores",
+        "snippet": "\\\\tracingrestores=$1",
+        "description": "Write save-stack details to log file"
+      },
+      {
+        "displayText": "\\tracingstats",
+        "snippet": "\\\\tracingstats=$1",
+        "description": "Write memory usage details to log file"
+      },
+      {
+        "displayText": "\\tracingall",
+        "snippet": "\\\\tracingall=$1",
+        "description": "Turn on all tracing commands"
+      },
+      {
+        "displayText": "\\tracingassigns",
+        "snippet": "\\\\tracingassigns=$1",
+        "description": "Trace grouping assignments",
+        "rightLabelHTML": "e-teX"
+      },
+      {
+        "displayText": "\\tracinggroups",
+        "snippet": "\\\\tracinggroups=$1",
+        "description": "Trace group entry and exit",
+        "rightLabelHTML": "e-teX"
+      },
+      {
+        "displayText": "\\tracingifs",
+        "snippet": "\\\\tracingifs=$1",
+        "description": "Trace conditional statements",
+        "rightLabelHTML": "e-teX"
+      },
+      {
+        "displayText": "\\tracingscantokens",
+        "snippet": "\\\\tracingscantokens=$1",
+        "description": "Trace \\scantokens invocation",
+        "rightLabelHTML": "e-teX"
+      },
+      {
+        "displayText": "\\tracingcolors",
+        "snippet": "\\\\tracingcolors=$1",
+        "description": "Trace color information",
+        "rightLabelHTML": "xcolor"
       }
     ]
   },
