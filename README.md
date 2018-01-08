@@ -16,7 +16,7 @@
 ## About
 This package is intended to be used with [Atom](https://atom.io).
 
-- **Note**: This package is compatible with ['latex-autocomplete'](https://atom.io/packages/latex-autocomplete) and does not necessarily replace it's functionality. They perform different types of autocompleting. Both can be enabled simultaneously without conflict.
+- **Note**: This package is compatible with [`latex-autocomplete`](https://atom.io/packages/latex-autocomplete) and does not necessarily replace it's functionality. They perform different types of autocompleting. Both can be enabled simultaneously without conflict.
 
 It provides a range of customisable "completions" that appear when typing a command. When one is selected, it will expand to a predefined snippet of text that can then be used like normal.
 
