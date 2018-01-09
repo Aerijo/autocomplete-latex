@@ -11,6 +11,7 @@
   - [In document](#in-document)
 - [Configuration](#configuration)
   - [Settings](#settings)
+  - [Commands](#commands)
   - [Adding completions](#adding-completions)
 
 ## About
@@ -34,7 +35,7 @@ with the cursor placing itself between the first optional brackets. Pressing `ta
 This functionality may already be present as snippets from other packages. However, there are certain things this package can do that are difficult or impossible to do with snippets. Some are aesthetic, but others include better scope parsing and customisability.
 
 ## Why use this package?
-Presumably, you're here because you want to be able to autocomplete common commands you use. Yes, snippets can do this, but they can be difficult to remember, especially if used infrequently. `autocomplete-snippets` is a handy package that displays most snippets in a popup as you type, but it has one major flaw when it comes to LaTeX documents: it doesn't support punctuation.
+Presumably, you're here because you want to be able to autocomplete common commands you use. Yes, snippets can do this, but they can be difficult to remember, especially if used infrequently. [`autocomplete-snippets`](https://atom.io/packages/autocomplete-snippets) is a handy package that displays most snippets in a popup as you type, but it has one major flaw when it comes to LaTeX documents: it doesn't support punctuation.
 
 Most of what you type in LaTeX is just regular words. It gets annoying when you're typing, and a popup menu appears every other word. This package only shows suggestions when a `\` is typed; this makes completions easy to access but kept out of the way during normal use.
 
@@ -63,7 +64,7 @@ The current scope also affects which completions appear, so you'll only see comm
 
 If something unexpected is occurring, check your [settings](#settings). Make sure all the [requirements](#requirements) are also met. If the issue persists, [open an issue](https://github.com/Aerijo/autocomplete-latex/issues) on the repo page and I'll try to help. It's still a young package, so I wouldn't expect it to be perfect (yet :wink:).
 
-To define your own completions, see [Adding completions](#adding-completions)
+To define your own completions, see [Adding completions](#adding-completions).
 
 ## Configuration
 ### Settings
@@ -110,6 +111,9 @@ If you know what you're doing, this setting determines which characters are cons
 #### :warning: Citation completion regex
 Same as above, but for `@...` completions.
 
+### Commands
+#### Clear cache
+Introduced in v0.6.0, this command manually empties the cached completions. Use this to make sure any new completions you add are properly added to the cache.
 
 ### Adding completions
 **Not stable**: Look in docs for current format.
