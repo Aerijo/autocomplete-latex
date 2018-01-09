@@ -44,7 +44,7 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
 ## Usage
 ### Requirements
 
-- The package [`autocomple-plus`](https://atom.io/packages/autocomplete-plus) be activated. This is a builtin package, so no additional download required.
+- The package [`autocomplete-plus`](https://atom.io/packages/autocomplete-plus) be activated. This is a builtin package, so no additional download required.
 
 - A grammar scoping package for LaTeX. These are the ones titled `language-something`. The most popular one is [`language-latex`](https://atom.io/packages/language-latex), but [my own](https://atom.io/packages/language-latex2e) will also work. I haven't tested with any others that scope LaTeX, but they should work if they follow established conventions.
   - Note: If you have syntax highlighting setup, you probably already have one installed.
@@ -53,29 +53,39 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
 You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc.
 
 ### In document
-As mentioned above, completions will automatically appear when typing. These suggestions are filtered and ranked according to the prefix, which is defined as a `\` followed by any number of letters (`\\[a-zA-Z]*` for you [regex](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) fans) up until the cursor. If any non-letters are present (eg. number or space) it will no longer show the completions and will wait until a vaild prefix is reached again.
+As mentioned above, completions will automatically appear when typing. These suggestions are filtered and ranked according to the prefix, which is defined as a `\` followed by any number of letters (`\\[a-zA-Z]*` for you [regex](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) fans) up until the cursor. If any non-letters are present (eg. number or space) it will no longer show the completions and will wait until a valid prefix is reached again.
 
-  - **Note**: it will also activate immediately after a `!`. This is to support [magic comment](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding) completions as well.
+  - **Note**: Two special cases where it will also activate are after an `!` and an `@`. This is to support [magic comment](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding) completions and markdown-like citations.
 
 The current scope also affects which completions appear, so you'll only see commands like `\frac` as an option when in math mode.
 
  - **Tip**: the completions will appear if the current prefix is an ordered subset of the potential completion. This means that while you _could_ type `\subsub` to get the `\subsubsection` completion, you could just type `\sbb` instead.
 
-If something unexpected is occuring, check your [settings](#settings). Make sure all the [requirements](#requirements) are also met. If the issue persists, [open an issue](https://github.com/Aerijo/autocomplete-latex/issues) on the repo page and I'll try to help. It's still a young package, so I wouldn't expect it to be perfect (yet :wink:).
+If something unexpected is occurring, check your [settings](#settings). Make sure all the [requirements](#requirements) are also met. If the issue persists, [open an issue](https://github.com/Aerijo/autocomplete-latex/issues) on the repo page and I'll try to help. It's still a young package, so I wouldn't expect it to be perfect (yet :wink:).
 
 To define your own completions, see [Adding completions](#adding-completions)
 
 ## Configuration
 ### Settings
-In the settings view, there are several options available to customise how this package works. If changing a setting does not appear to work, try restarting Atom.
+In the settings view, there are ~~several~~ many options available to customise how this package works. If changing a setting does not appear to work, try restarting Atom.
 
-#### Completion regex
-If you don't know what [`regex`](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) is, don't touch this setting. If you change it, make sure to put it back to the default. You've been warned.
+#### User completions path
+Use this to provide the path to your own completions. Ensure it is an absolute path, and that you include the file extension as well. More info about what this file can be is found in [Adding completions](#adding-completions) and `./docs/`.
 
-If you know what you're doing, this setting determines which characters are considered a valid prefix to the completion. The `$` represents the current cursor position, and it can look back as far as the beginning of the line.
+#### Enable default completions
+This option allows you to disable the default LaTeX completions. This may be preferable if you have a highly customised setup. Note that user completions will override the default completions if both share the same display text.
+
+#### Enable builtin provider
+Use this to allow the completions provided by `autocomplete-plus`. These are not controlled by this package, so settings here will not affect them. They are the words taken from open buffers that appear as you type.
+
+#### Enable citation completions
+This package supports markdown-like syntax for citations. When enabled, typing `@` followed by non-space characters will show completions scraped from the `.bib` file, if it can be located. The file path must be given somewhere in the current file for this to work, and the magic comment `% !TEX bib = ...` is supported.
+
+#### Minimum prefix length
+Determines how long the prefix must be until suggestions will appear. Default value is that of `autocomplete-plus`. Making it greater will reduce 'noise', but decrease effectiveness (because lessening typing is what this is all about; well, that and reducing typos).
 
 #### Disabled scopes
-A list of scopes where you do not want to see completions from this package. To know which scopes to use, run the command `editor:log-cursor-scope` in the command palette. The notification that pops up will list the current scopes of the cursor. For example, doing this in a commented section might give the following scopes:
+A list of scopes where you do not want to see completions from this package. To know which scopes to use, run the command `editor:log-cursor-scope` in the command palette. The notification that pops up will list the current scopes at the cursor. For example, doing this in a commented section might give the following scopes:
 - `text.tex.latex`
 - `comment.line.percentage.latex`
 
@@ -87,16 +97,18 @@ You can be as precise as you like; a value of `.string.other.math.inline` will s
 will suppress completions when both scopes are present. Similarly, `comma` separated groups will suppress completions if at least one matches. Eg.
 - `.comment, .string.other.math.display .string.other.math.inline`
 
-will disable completions if the current scope is part of a comment or in math mode. (Note: if you want to disable all math snippets, `.string.other.math` will disable for both inline AND display).
+will disable completions if the current scope is part of a comment _or_ in math mode. (Note: if you want to disable all math snippets, `.string.other.math` will disable for both inline _and_ display).
 
-#### Enable default completions
-This option allows you to disable the default completions. This may be preferable if you have a highly customised setup. Note that user completions will appear above the default completions if both share the same display text.
+#### Citation format
+The format for what `@...` should be replaced with. All backslashes must be doubled up, and a single `$` must be somewhere to represent where the citation text will go.
 
-#### Minimum prefix length
-Determines how long the prefix must be until suggestions will appear. Default value is `2`. Making it greater will reduce noise, but decrease effectiveness (because lessening typing is what this is all about; that, and reducing typos).
+#### :warning: Completion regex
+If you don't know what [`regex`](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) is, don't touch this setting. If you change it, make sure to put it back to the default. You've been warned.
 
-#### User completions path
-Use this to provide the path to your own completions. Ensure it is an absolute path, and that you include the file extension as well (should be `.json`).
+If you know what you're doing, this setting determines which characters are considered a valid prefix to the completion. The `$` represents the current cursor position, and it can look back as far as the beginning of the line. Backslashes do __not__ need to be doubled up.
+
+#### :warning: Citation completion regex
+Same as above, but for `@...` completions.
 
 
 ### Adding completions
