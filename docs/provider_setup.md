@@ -43,15 +43,12 @@ When obtaining relevant suggestions, the provider will do the following:
 Recently added support for `@...` citation shorthand syntax; it will expand to `\autocite{...}`, or any other control word the user sets. Implementation is synchronous and brute force: there is plenty of room for improvement by caching results and such.
 
 ### Variables provided by `autocomplete-plus`
-- `editor`: instance of TextEditor class
+- `editor`: instance of `TextEditor` class
 - `bufferPosition`: object with row and col of cursor
 - `scopeDescriptor`: object with `scope` property that holds an array of current scopes
 - `prefix`: string of prefix characters as determined by `autocomplete-plus`: not used, as `\` can only be found using a custom prefix.
 - `activated-manually`: not used, as irrelevant.
 
 
-## todo:
-- Optimise (but only after everything works)
-- Separate completions by package
-  - Give user option to automatically detect packages, or to manually select.
-- (primitively) detect new user commands defined with `[egx]def` or `let`
+## TODO:
+See [projects page](https://github.com/Aerijo/autocomplete-latex/projects/1)
