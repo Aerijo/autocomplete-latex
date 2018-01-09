@@ -75,6 +75,10 @@
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
       },
       {
+        "displayText": "\\document",
+        "snippet": "\\\\begin{document}\n$1\n\\\\end{document}\n"
+      },
+      {
         "displayText": "\\align",
         "snippet": "\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}\n",
         "description": "Begin amsmath align environment",
