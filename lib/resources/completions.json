@@ -70,38 +70,38 @@
     "snippet": [
       {
         "displayText": "\\begin",
-        "snippet": "\\\\begin{${1:env}}$2\n\t$3\n\\\\end{${1:env}}",
+        "snippet": "\\\\begin{$1}$2\n\t$3\n\\\\end{$1}\n",
         "description": "Begin new environment",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
       },
       {
         "displayText": "\\align",
-        "snippet": "\\%\n\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
+        "snippet": "\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}\n",
         "description": "Begin amsmath align environment",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
       },
       {
         "displayText": "\\figure",
-        "snippet": "\\\\begin{figure}[$1]\n\t\\\\centering\n\t\\\\includegraphics{$2}\n\t\\\\caption{$3}\n\t\\\\label{$4}\n\\\\end{figure}\n$5"
+        "snippet": "\\\\begin{figure}[$1]\n\t\\\\centering\n\t\\\\includegraphics{$2}\n\t\\\\caption{$3}\n\t\\\\label{$4}\n\\\\end{figure}\n"
       },
       {
         "displayText": "\\itemize",
-        "snippet": "\\\\begin{itemize}\n\t\\\\item $1\n\\\\end{itemize}$2",
+        "snippet": "\\\\begin{itemize}\n\t\\\\item $1\n\\\\end{itemize}\n",
         "description": "Bullet point list"
       },
       {
         "displayText": "\\enumerate",
-        "snippet": "\\\\begin{enumerate}\n\t\\\\item $1\n\\\\end{enumerate}$2",
+        "snippet": "\\\\begin{enumerate}\n\t\\\\item $1\n\\\\end{enumerate}\n",
         "description": "Enumerated list"
       },
       {
         "displayText": "\\description",
-        "snippet": "\\\\begin{description}\n\t\\\\item [$1] $2\n\\\\end{description}$3",
+        "snippet": "\\\\begin{description}\n\t\\\\item [$1] $2\n\\\\end{description}\n",
         "description": "Descriptive list"
       },
       {
         "displayText": "\\tikzpicture",
-        "snippet": "\\\\begin{tikzpicture}\n\t$1\n\\\\end{tikzpicture}"
+        "snippet": "\\\\begin{tikzpicture}\n\t$1\n\\\\end{tikzpicture}\n"
       }
     ],
     "import": [
@@ -117,7 +117,7 @@
     "package": [
       {
         "displayText": "\\usepackage",
-        "snippet": "\\\\usepackage$2{${1:<package>}}\n$3",
+        "snippet": "\\\\usepackage$2{$1}$3",
         "description": "Load a package",
         "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
       }
@@ -165,7 +165,7 @@
       },
       {
         "displayText": "\\documentclass",
-        "snippet": "\\\\documentclass${2}{${1:class}}\n$3",
+        "snippet": "\\\\documentclass$2{$1}$3",
         "description": "Set document class",
         "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
       },
