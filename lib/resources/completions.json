@@ -191,7 +191,7 @@
       {
         "displayText": "\\tracingonline",
         "snippet": "\\\\tracingonline=$1",
-        "description": "Write disgnostic info to terminal as well"
+        "description": "Write diagnostic info to terminal as well"
       },
       {
         "displayText": "\\tracingoutput",
