@@ -148,6 +148,22 @@
         "snippet": "\\\\autocite$2{$1}$3"
       },
       {
+        "displayText": "\\parencite",
+        "snippet": "\\\\parencite$2{$1}$3"
+      },
+      {
+        "displayText": "\\cite",
+        "snippet": "\\\\cite$2{$1}$3"
+      },
+      {
+        "displayText": "\\textcite",
+        "snippet": "\\\\textcite$2{$1}$3"
+      },
+      {
+        "displayText": "\\citetitle",
+        "snippet": "\\\\citetitle$2{$1}$3"
+      },
+      {
         "displayText": "\\footnote",
         "snippet": "\\\\footnote{$1}$2"
       },
