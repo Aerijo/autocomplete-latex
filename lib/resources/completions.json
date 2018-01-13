@@ -89,6 +89,10 @@
         "snippet": "\\\\begin{figure}[$1]\n\t\\\\centering\n\t\\\\includegraphics{$2}\n\t\\\\caption{$3}\n\t\\\\label{$4}\n\\\\end{figure}"
       },
       {
+        "displayText": "\\table",
+        "snippet": "\\\\begin{table}[$1]\n\t\\\\centering\n\t\\\\begin{tabular}{$2}\n\t\t$3\n\t\\\\end{tabular}\n\t\\\\caption{$4}\n\t\\\\label{$5}\n\\\\end{table}"
+      },
+      {
         "displayText": "\\itemize",
         "snippet": "\\\\begin{itemize}\n\t\\\\item $1\n\\\\end{itemize}",
         "description": "Bullet point list"
