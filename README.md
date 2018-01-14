@@ -34,6 +34,8 @@ with the cursor placing itself between the first optional brackets. Pressing `ta
 
 This functionality may already be present as snippets from other packages. However, there are certain things this package can do that are difficult or impossible to do with snippets. Some are aesthetic, but others include better scope parsing and customisability.
 
+Further functionality includes markdown-like citations (with `@...`), magic comment completions, and package name completions.
+
 ## Why use this package?
 Presumably, you're here because you want to be able to autocomplete common commands you use. Yes, snippets can do this, but they can be difficult to remember, especially if used infrequently. [`autocomplete-snippets`](https://atom.io/packages/autocomplete-snippets) is a handy package that displays most snippets in a popup as you type, but it has one major flaw when it comes to LaTeX documents: it doesn't support punctuation.
 
@@ -50,13 +52,15 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
 - A grammar scoping package for LaTeX. These are the ones titled `language-something`. The most popular one is [`language-latex`](https://atom.io/packages/language-latex), but [my own](https://atom.io/packages/language-latex2e) will also work. I haven't tested with any others that scope LaTeX, but they should work if they follow established conventions.
   - Note: If you have syntax highlighting setup, you probably already have one installed.
 
+- For package autocompletion, the command line tool `tlmgr` must be installed. It comes with TeX Live and MacTeX.
+
 ### Setup
-You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc.
+You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc. For a more customised use, see [Adding completions](#adding-completions).
 
 ### In document
 As mentioned above, completions will automatically appear when typing. These suggestions are filtered and ranked according to the prefix, which is defined as a `\` followed by any number of letters (`\\[a-zA-Z]*` for you [regex](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) fans) up until the cursor. If any non-letters are present (eg. number or space) it will no longer show the completions and will wait until a valid prefix is reached again.
 
-  - **Note**: Two special cases where it will also activate are after an `!` and an `@`. This is to support [magic comment](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding) completions and markdown-like citations.
+  - **Note**: There are special cases where it will also activate, including after an `!` and an `@`. This is to support [magic comment](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding) completions and markdown-like citations. It will also activate inside a `\usepackage{}` command, giving a (hopefully) exhaustive list of all package installed on your distribution.
 
 The current scope also affects which completions appear, so you'll only see commands like `\frac` as an option when in math mode.
 
@@ -81,6 +85,9 @@ Use this to allow the completions provided by `autocomplete-plus`. These are not
 
 #### Enable citation completions
 This package supports markdown-like syntax for citations. When enabled, typing `@` followed by non-space characters will show completions scraped from the `.bib` file, if it can be located. The file path must be given somewhere in the current file for this to work, and the magic comment `% !TEX bib = ...` is supported.
+
+#### Enable package completions
+An attempt will be made to find all packages installed by TeX Live and present them when inside a `\usepackage{}` command. This will only work if the `tlmgr` command is installed, so MikTeX is not supported (yet).
 
 #### Minimum prefix length
 Determines how long the prefix must be until suggestions will appear. Default value is that of `autocomplete-plus`. Making it greater will reduce 'noise', but decrease effectiveness (because lessening typing is what this is all about; well, that and reducing typos).
