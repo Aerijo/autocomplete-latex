@@ -1,0 +1,42 @@
+# Drawing
+tikz
+pgfplots
+
+# Maths
+mathtools
+amsmath
+amssymb
+amsthm
+
+# Images
+graphicx
+float
+
+# Bibliography
+biblatex
+
+# Tables
+booktabs
+array
+tabularx
+
+# Lists
+enumitem
+
+# Code
+listings
+minted
+
+# Other
+siunitx
+geometry
+lmodern
+verbatim
+fontenc
+microtype
+hyperref
+babel
+todonotes
+inputenc
+xspace
+fancyvrb
