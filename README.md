@@ -57,6 +57,29 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
 ### Setup
 You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc. For a more customised use, see [Adding completions](#adding-completions).
 
+If you want file paths to be completed, you can use [`autocomplete-paths`](https://atom.io/packages/autocomplete-paths). Once installed, paste the following into your `config.cson` file (make sure it's in line with the other package names; if the `"autocomplete-paths"` key is already there, paste the part from `scopes` and down, including the last `]`):
+```cson
+"autocomplete-paths":
+  scopes: [
+    {
+      extensions: [
+        ".tex"
+        ".bib"
+        ".tikz"
+      ]
+      prefixes: [
+        "\\\\input{"
+        "\\\\include{"
+        "^%\\s*!T[eE]X\\s+(root|bib)\\s*=\\s*"
+      ]
+      relative: true
+      scopes: [
+        "text.tex.latex"
+      ]
+    }
+  ]
+```
+
 ### In document
 As mentioned above, completions will automatically appear when typing. These suggestions are filtered and ranked according to the prefix, which is defined as a `\` followed by any number of letters (`\\[a-zA-Z]*` for you [regex](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) fans) up until the cursor. If any non-letters are present (eg. number or space) it will no longer show the completions and will wait until a valid prefix is reached again.
 
