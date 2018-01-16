@@ -1,0 +1,451 @@
+{
+  "magicComments": {
+    ".text.tex.latex": {
+      "property": [
+        {
+          "displayText": "!cleanPatterns",
+          "snippet": "% !TEX cleanPatterns = $1",
+          "description": "Specify patterns to use for latex:clean"
+        },
+        {
+          "displayText": "!enableSynctex",
+          "snippet": "% !TEX enableSynctex = $1",
+          "description": "Override synctex setting"
+        },
+        {
+          "displayText": "!enableExtendedBuildMode",
+          "snippet": "% !TEX enableExtendedBuildMode = $1",
+          "description": "Override extended build mode setting"
+        },
+        {
+          "displayText": "!enableShellEscape",
+          "snippet": "% !TEX enableShellEscape = $1",
+          "description": "Override shell escape setting"
+        },
+        {
+          "displayText": "!engine",
+          "snippet": "% !TEX engine = $1",
+          "description": "Set engine to compile with"
+        },
+        {
+          "displayText": "!moveResultToSourceDirectory",
+          "snippet": "% !TEX moveResultToSourceDirectory = $1",
+          "description": "Override move result to source directory setting"
+        },
+        {
+          "displayText": "!outputFormat",
+          "snippet": "% !TEX outputFormat = $1",
+          "description": "Override the output format"
+        },
+        {
+          "displayText": "!jobNames",
+          "snippet": "% !TEX jobNames = $1",
+          "description": "Control the number and names of build jobs"
+        },
+        {
+          "displayText": "!outputDirectory",
+          "snippet": "% !TEX outputDirectory = $1",
+          "description": "Specify the output directory that should be used"
+        },
+        {
+          "displayText": "!producer",
+          "snippet": "% !TEX producer = $1",
+          "description": "Override the PDF producer"
+        },
+        {
+          "displayText": "!root",
+          "snippet": "% !TEX root = $1",
+          "description": "Specify the root file that should be built"
+        },
+        {
+          "displayText": "!syntax",
+          "snippet": "% !TEX syntax = $1",
+          "description": "Change the current syntax highlighting"
+        },
+        {
+          "displayText": "!bib",
+          "snippet": "% !TEX bib = $1",
+          "description": "Specify bibliography file path"
+        }
+      ]
+    }
+  },
+  "formatting": {
+    ".text.tex.latex": {
+      "method": [
+        {
+          "displayText": "\\textbf",
+          "snippet": "\\\\textbf{$1}$2",
+          "description": "Bold text"
+        },
+        {
+          "displayText": "\\textit",
+          "snippet": "\\\\textit{$1}$2",
+          "description": "Italic text"
+        },
+        {
+          "displayText": "\\emph",
+          "snippet": "\\\\emph{$1}$2",
+          "description": "Emphasise text"
+        },
+        {
+          "displayText": "\\underline",
+          "snippet": "\\\\underline{$1}$2",
+          "description": "Underline text"
+        }
+      ]
+    }
+  },
+  "generalMath": {
+    ".text.tex.latex": {
+      "snippet": [
+        {
+          "displayText": "\\align",
+          "snippet": "\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
+          "description": "Begin amsmath align environment",
+          "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
+        }
+      ]
+    },
+    ".text.tex.latex .string.other.math": {
+      "method": [
+        {
+          "displayText": "\\frac",
+          "snippet": "\\\\frac{$1}{$2}$3",
+          "description": "Display math fraction",
+          "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics"
+        },
+        {
+          "displayText": "\\text",
+          "snippet": "\\\\text{$1}$2",
+          "description": "Text in mathmode",
+          "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations"
+        },
+        {
+          "displayText": "\\sum",
+          "snippet": "\\\\sum_{$1}^{$2}$3",
+          "description": "Sum with limits"
+        },
+        {
+          "displayText": "\\int",
+          "snippet": "\\\\int_{$1}^{$2}$3",
+          "description": "Integral with limits"
+        }
+      ]
+    }
+  },
+  "tikz": {
+    "text.tex.latex": {
+      "snippet": [
+        {
+          "displayText": "\\tikzpicture",
+          "snippet": "\\\\begin{tikzpicture}\n\t$1\n\\\\end{tikzpicture}"
+        }
+      ]
+    },
+    ".text.tex.latex.tikz, source.embedded.tikz": {
+      "method": [
+        {
+          "displayText": "\\path",
+          "snippet": "\\\\path\\[$1\\]$2",
+          "description": "Path command"
+        },
+        {
+          "displayText": "\\node",
+          "snippet": "\\\\node",
+          "description": "Node command",
+          "rightLabelHTML": "Alias for <code>\\path node</code>"
+        },
+        {
+          "displayText": "\\coordinate",
+          "snippet": "\\\\coordinate",
+          "description": "Coordinate command",
+          "rightLabelHTML": "Alias for <code>\\path coordinate</code>"
+        },
+        {
+          "displayText": "\\pic",
+          "snippet": "\\\\pic",
+          "description": "Pic command",
+          "rightLabelHTML": "Alias for <code>\\path pic</code>"
+        },
+        {
+          "displayText": "\\graph",
+          "snippet": "\\\\graph",
+          "description": "Graph command",
+          "rightLabelHTML": "Alias for <code>\\path graph</code>"
+        },
+        {
+          "displayText": "\\matrix",
+          "snippet": "\\\\matrix",
+          "description": "Matrix command",
+          "rightLabelHTML": "Alias for <code>\\path node [matrix]</code>"
+        },
+        {
+          "displayText": "\\fill",
+          "snippet": "\\\\fill",
+          "description": "Fill command",
+          "rightLabelHTML": "Alias for <code>\\path [fill]</code>"
+        },
+        {
+          "displayText": "\\filldraw",
+          "snippet": "\\\\filldraw",
+          "description": "Filldraw command",
+          "rightLabelHTML": "Alias for <code>\\path [fill, draw]</code>"
+        },
+        {
+          "displayText": "\\draw",
+          "snippet": "\\\\draw",
+          "description": "Draw command",
+          "rightLabelHTML": "Alias for <code>\\path [draw]</code>"
+        },
+        {
+          "displayText": "\\pattern",
+          "snippet": "\\\\pattern",
+          "description": "Pattern command",
+          "rightLabelHTML": "Alias for <code>\\path [pattern]</code>"
+        },
+        {
+          "displayText": "\\shade",
+          "snippet": "\\\\shade",
+          "description": "Shade command",
+          "rightLabelHTML": "Alias for <code>\\path [shade]</code>"
+        },
+        {
+          "displayText": "\\shadedraw",
+          "snippet": "\\\\shadedraw",
+          "description": "Shadedraw command",
+          "rightLabelHTML": "Alias for <code>\\path [shade, draw]</code>"
+        },
+        {
+          "displayText": "\\clip",
+          "snippet": "\\\\clip",
+          "description": "Clip command",
+          "rightLabelHTML": "Alias for <code>\\path [clip]</code>"
+        },
+        {
+          "displayText": "\\useasboundingbox",
+          "snippet": "\\\\useasboundingbox",
+          "description": "Use as bounding box command",
+          "rightLabelHTML": "Alias for <code>\\path [use as bounding box]</code>"
+        }
+      ]
+    }
+  },
+  "generalCommands": {
+    ".text.tex.latex": {
+      "import": [
+        {
+          "displayText": "\\include",
+          "snippet": "\\\\include{$1}$2"
+        },
+        {
+          "displayText": "\\input",
+          "snippet": "\\\\input{$1}$2"
+        }
+      ],
+      "package": [
+        {
+          "displayText": "\\usepackage",
+          "snippet": "\\\\usepackage$2{$1}$3",
+          "description": "Load a package",
+          "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
+        },
+        {
+          "displayText": "\\documentclass",
+          "snippet": "\\\\documentclass$2{$1}$3",
+          "description": "Set document class",
+          "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
+        }
+      ]
+    }
+  },
+  "generalEnvironments": {
+    ".text.tex.latex": {
+      "snippet": [
+        {
+          "displayText": "\\begin",
+          "snippet": "\\\\begin{$1}$2\n\t$3\n\\\\end{$1}",
+          "description": "Begin new environment",
+          "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
+        },
+        {
+          "displayText": "\\document",
+          "snippet": "\\\\begin{document}\n$1\n\\\\end{document}"
+        },
+        {
+          "displayText": "\\figure",
+          "snippet": "\\\\begin{figure}[$1]\n\t\\\\centering\n\t\\\\includegraphics{$2}\n\t\\\\caption{$3}\n\t\\\\label{$4}\n\\\\end{figure}"
+        },
+        {
+          "displayText": "\\table",
+          "snippet": "\\\\begin{table}[$1]\n\t\\\\centering\n\t\\\\begin{tabular}{$2}\n\t\t$3\n\t\\\\end{tabular}\n\t\\\\caption{$4}\n\t\\\\label{$5}\n\\\\end{table}"
+        },
+        {
+          "displayText": "\\itemize",
+          "snippet": "\\\\begin{itemize}\n\t\\\\item $1\n\\\\end{itemize}",
+          "description": "Bullet point list"
+        },
+        {
+          "displayText": "\\enumerate",
+          "snippet": "\\\\begin{enumerate}\n\t\\\\item $1\n\\\\end{enumerate}",
+          "description": "Enumerated list"
+        },
+        {
+          "displayText": "\\description",
+          "snippet": "\\\\begin{description}\n\t\\\\item [$1] $2\n\\\\end{description}",
+          "description": "Descriptive list"
+        }
+      ]
+    }
+  },
+  "sectioning": {
+    ".text.tex.latex": {
+      "method": [
+        {
+          "displayText": "\\section",
+          "snippet": "\\\\section\\{$1\\}$2"
+        },
+        {
+          "displayText": "\\subsection",
+          "snippet": "\\\\subsection\\{$1\\}$2"
+        },
+        {
+          "displayText": "\\subsubsection",
+          "snippet": "\\\\subsubsection\\{$1\\}$2"
+        },
+        {
+          "displayText": "\\clearpage",
+          "snippet": "\\\\clearpage"
+        },
+        {
+          "displayText": "\\newpage",
+          "snippet": "\\\\newpage"
+        }
+      ]
+    }
+  },
+  "debugging": {
+    ".text.tex.latex": {
+      "method": [
+        {
+          "displayText": "\\tracingmacros",
+          "snippet": "\\\\tracingmacros=$1",
+          "description": "Write all macro expansions to the log file"
+        },
+        {
+          "displayText": "\\tracingcommands",
+          "snippet": "\\\\tracingcommands=$1",
+          "description": "Write all commands to the log file"
+        },
+        {
+          "displayText": "\\tracinglostchars",
+          "snippet": "\\\\tracinglostchars=$1",
+          "description": "Write missing characters to the log file"
+        },
+        {
+          "displayText": "\\tracingonline",
+          "snippet": "\\\\tracingonline=$1",
+          "description": "Write diagnostic info to terminal as well"
+        },
+        {
+          "displayText": "\\tracingoutput",
+          "snippet": "\\\\tracingoutput=$1",
+          "description": "Write shipped box content to log file"
+        },
+        {
+          "displayText": "\\tracingpages",
+          "snippet": "\\\\tracingpages=$1",
+          "description": "Write page cost calculations to log file"
+        },
+        {
+          "displayText": "\\tracingparagraphs",
+          "snippet": "\\\\tracingparagraphs=$1",
+          "description": "Write line breaking calculations to log file"
+        },
+        {
+          "displayText": "\\tracingrestores",
+          "snippet": "\\\\tracingrestores=$1",
+          "description": "Write save-stack details to log file"
+        },
+        {
+          "displayText": "\\tracingstats",
+          "snippet": "\\\\tracingstats=$1",
+          "description": "Write memory usage details to log file"
+        },
+        {
+          "displayText": "\\tracingall",
+          "snippet": "\\\\tracingall=$1",
+          "description": "Turn on all tracing commands"
+        },
+        {
+          "displayText": "\\tracingassigns",
+          "snippet": "\\\\tracingassigns=$1",
+          "description": "Trace grouping assignments",
+          "rightLabelHTML": "e-teX"
+        },
+        {
+          "displayText": "\\tracinggroups",
+          "snippet": "\\\\tracinggroups=$1",
+          "description": "Trace group entry and exit",
+          "rightLabelHTML": "e-teX"
+        },
+        {
+          "displayText": "\\tracingifs",
+          "snippet": "\\\\tracingifs=$1",
+          "description": "Trace conditional statements",
+          "rightLabelHTML": "e-teX"
+        },
+        {
+          "displayText": "\\tracingscantokens",
+          "snippet": "\\\\tracingscantokens=$1",
+          "description": "Trace \\scantokens invocation",
+          "rightLabelHTML": "e-teX"
+        },
+        {
+          "displayText": "\\tracingcolors",
+          "snippet": "\\\\tracingcolors=$1",
+          "description": "Trace color information",
+          "rightLabelHTML": "xcolor"
+        }
+      ]
+    }
+  },
+  "citations": {
+    ".text.tex.latex": {
+      "method": [
+        {
+          "displayText": "\\autocite",
+          "snippet": "\\\\autocite$2{$1}$3"
+        },
+        {
+          "displayText": "\\parencite",
+          "snippet": "\\\\parencite$2{$1}$3"
+        },
+        {
+          "displayText": "\\cite",
+          "snippet": "\\\\cite$2{$1}$3"
+        },
+        {
+          "displayText": "\\textcite",
+          "snippet": "\\\\textcite$2{$1}$3"
+        },
+        {
+          "displayText": "\\citetitle",
+          "snippet": "\\\\citetitle$2{$1}$3"
+        },
+        {
+          "displayText": "\\footnote",
+          "snippet": "\\\\footnote{$1}$2"
+        },
+        {
+          "displayText": "\\footnotemark",
+          "snippet": "\\\\footnotemark"
+        },
+        {
+          "displayText": "\\footnotetext",
+          "snippet": "\\\\footnotetext{$1}$2"
+        }
+      ]
+    }
+  }
+}
