@@ -4,6 +4,7 @@
 ## Table of contents
 
 - [About](#about)
+- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Requirements](#requirements)
@@ -36,10 +37,24 @@ This functionality may already be present as snippets from other packages. Howev
 
 Further functionality includes markdown-like citations (with `@...`), magic comment completions, and package name completions. The package completions are taken from your TeX Live installation, and many are not designed to be used directly, or are deprecated and should not be used at all. Some are also engine specific, so just appearing in the list is no guarantee it will work or should be used. If you find this feature more annoying than useful, it can be disabled in settings.
 
-## Why use this package?
+
+### Why use this package?
 Presumably, you're here because you want to be able to autocomplete common commands you use. Yes, snippets can do this, but they can be difficult to remember, especially if used infrequently. [`autocomplete-snippets`](https://atom.io/packages/autocomplete-snippets) is a handy package that displays most snippets in a popup as you type, but it has one major flaw when it comes to LaTeX documents: it doesn't support punctuation.
 
 Most of what you type in LaTeX is just regular words. It gets annoying when you're typing, and a popup menu appears every other word. This package only shows suggestions when a `\` is typed; this makes completions easy to access but kept out of the way during normal use.
+
+## Features
+- Comes with a set of common completions
+- Specify the scope of each set of completions
+- Supports user provided completions
+- Completes [magic comments](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding)
+- Completes citations using markdown-like syntax (`@...`)
+- Package name completion using `tlmgr` command line tool*
+- Completes file paths after magic comments (`root` and `bib` only) and inside of `\input{}` and `\include{}`**
+
+\* Package completions are scraped from a list of all `.sty` files `tlmgr` can find. Many of these are not intended to be used directly with a `\usepackage{}` command, so always check the documentation if unsure.
+
+\** Path completion has additional [requirements](#requirements).
 
 ## Installation
 To install, run `apm install autocomplete-latex` or find it in Atom's builtin package manager.
@@ -53,6 +68,8 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
   - Note: If you have syntax highlighting setup, you probably already have one installed.
 
 - For package autocompletion, the command line tool `tlmgr` must be installed. It comes with TeX Live and MacTeX.
+
+- For path autocompletion, [`autocomplete-paths`](https://atom.io/packages/autocomplete-paths) must be installed and the steps in [Setup](#setup) must be followed.
 
 ### Setup
 You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc. For a more customised use, see [Adding completions](#adding-completions).
