@@ -104,6 +104,14 @@
           "snippet": "\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
           "description": "Begin amsmath align environment",
           "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
+        },
+        {
+          "displayText": "$",
+          "snippet": "\\\\($1\\\\)"
+        },
+        {
+          "displayText": "$$",
+          "snippet": "\\\\[\n\t$1\n\\\\]"
         }
       ]
     },
