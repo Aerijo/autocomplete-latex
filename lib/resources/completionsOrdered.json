@@ -100,12 +100,6 @@
     ".text.tex.latex": {
       "snippet": [
         {
-          "displayText": "\\align",
-          "snippet": "\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
-          "description": "Begin amsmath align environment",
-          "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations"
-        },
-        {
           "displayText": "$",
           "snippet": "\\\\($1\\\\)"
         },
@@ -122,12 +116,6 @@
           "snippet": "\\\\frac{$1}{$2}$3",
           "description": "Display math fraction",
           "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics"
-        },
-        {
-          "displayText": "\\text",
-          "snippet": "\\\\text{$1}$2",
-          "description": "Text in mathmode",
-          "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations"
         },
         {
           "displayText": "\\sum",
@@ -452,6 +440,186 @@
         {
           "displayText": "\\footnotetext",
           "snippet": "\\\\footnotetext{$1}$2"
+        }
+      ]
+    }
+  },
+  "siunitx": {
+    ".text.tex.latex": {
+      "method": [
+        {
+          "displayText": "\\ang",
+          "snippet": "\\\\ang$2{${1:<angle>}}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\num",
+          "snippet": "\\\\num$2{${1:<number>}}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\si",
+          "snippet": "\\\\si$2{${1:<unit>}}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\SI",
+          "snippet": "\\\\SI$3{${1:<number>}}$4{${2:<unit>}}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\numlist",
+          "snippet": "\\\\numlist$2{${1:<numbers>}}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\numrange",
+          "snippet": "\\\\numrange$3{${1:<number1>}}{${2:<number2>}}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\SIlist",
+          "snippet": "\\\\SIlist$3{${1:<numbers>}}{${2:<unit>}}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\SIrange",
+          "snippet": "\\\\SIrange$4{${1:<number1>}}{${2:<number2>}}{${3:<unit>}}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\sisetup",
+          "snippet": "\\\\sisetup{$1}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\SIlist",
+          "snippet": "\\\\SIlist$3{$1}{$2}$0",
+          "rightLabelHTML": "siunitx"
+        },
+        {
+          "displayText": "\\tablenum",
+          "snippet": "\\\\tablenum$2{${1:<number>}}$0",
+          "rightLabelHTML": "siunitx"
+        }
+      ]
+    }
+  },
+  "xcolor": {
+    ".text.tex.latex": {
+      "method": [
+        {
+          "displayText": "\\definecolor",
+          "snippet": "\\\\definecolor$1{${2:<name>}}{${3:<model-list>}}{${4:<spec-list>}}$0",
+          "rightLabelHTML": "xcolor"
+        },
+        {
+          "displayText": "\\colorlet",
+          "snippet": "\\\\colorlet$3{${1:<name>}}{${2:<color>}}$0",
+          "rightLabelHTML": "xcolor"
+        },
+        {
+          "displayText": "\\color",
+          "snippet": "\\\\color{${1:<color>}}$0",
+          "rightLabelHTML": "xcolor"
+        },
+        {
+          "displayText": "\\textcolor",
+          "snippet": "\\\\textcolor{${1:<color>}}{${2:<text>}}$0",
+          "rightLabelHTML": "xcolor"
+        },
+        {
+          "displayText": "\\colorbox",
+          "snippet": "\\\\colorbox{${1:<color>}}{${2:<text>}}$0",
+          "rightLabelHTML": "xcolor"
+        },
+        {
+          "displayText": "\\pagecolor",
+          "snippet": "\\\\pagecolor{${1:<color>}}$0",
+          "rightLabelHTML": "xcolor"
+        },
+        {
+          "displayText": "\\nopagecolor",
+          "snippet": "\\\\nopagecolor",
+          "rightLabelHTML": "xcolor"
+        }
+      ]
+    }
+  },
+  "hyperref": {
+    ".text.tex.latex": {
+      "method": [
+        {
+          "displayText": "\\hypersetup",
+          "snippet": "\\\\hypersetup{$1}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\url",
+          "snippet": "\\\\url{$1}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\nolinkurl",
+          "snippet": "\\\\nolinkurl{$1}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\hyperbaseurl",
+          "snippet": "\\\\hyperbaseurl{$1}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\hyperimage",
+          "snippet": "\\\\hyperimage{${1:<image-URL>}}{${2:<text>}}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\hyperref",
+          "snippet": "\\\\hyperref$2{${1:<text>}}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\hyperlink",
+          "snippet": "\\\\hyperlink{${1:<name>}}{${2:<text>}}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\hypertarget",
+          "snippet": "\\\\hypertarget{${1:<name>}}{${2:<text>}}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\autoref",
+          "snippet": "\\\\autoref{${1:<label>}}$0",
+          "rightLabelHTML": "hyperref"
+        },
+        {
+          "displayText": "\\autopageref",
+          "snippet": "\\\\autopageref{${1:<label>}}$0",
+          "rightLabelHTML": "hyperref"
+        }
+      ]
+    }
+  },
+  "amsmath": {
+    ".text.tex.latex": {
+      "snippet": [
+        {
+          "displayText": "\\align",
+          "snippet": "\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
+          "description": "Begin amsmath align environment",
+          "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations",
+          "rightLabelHTML": "amsmath"
+        }
+      ],
+      "method": [
+        {
+          "displayText": "\\text",
+          "snippet": "\\\\text{$1}$2",
+          "description": "Text in mathmode",
+          "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations",
+          "rightLabelHTML": "amsmath"
         }
       ]
     }
