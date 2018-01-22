@@ -35,7 +35,13 @@ with the cursor placing itself between the first optional brackets. Pressing `ta
 
 This functionality may already be present as snippets from other packages. However, there are certain things this package can do that are difficult or impossible to do with snippets. Some are aesthetic, but others include better scope parsing and customisability.
 
-Further functionality includes markdown-like citations (with `@...`), magic comment completions, and package name completions. The package completions are taken from your TeX Live installation, and many are not designed to be used directly, or are deprecated and should not be used at all. Some are also engine specific, so just appearing in the list is no guarantee it will work or should be used. If you find this feature more annoying than useful, it can be disabled in settings.
+Further functionality includes:
+
+- Markdown-like citations (with `@...`)
+- Magic comment completions
+- Package name completions.
+  - The package completions are taken from your TeX Live installation, and many are not designed to be used directly, or are deprecated and should not be used at all. Some are also engine specific, so just appearing in the list is no guarantee it will work or should be used. If you find this feature more annoying than useful, it can be disabled in settings.
+- Math mode `$` as prefix for `\(\)`, and `$$` as prefix for `\[\]`
 
 
 ### Why use this package?
@@ -108,7 +114,7 @@ The current scope also affects which completions appear, so you'll only see comm
 
 If something unexpected is occurring, check your [settings](#settings). Make sure all the [requirements](#requirements) are also met. If the issue persists, [open an issue](https://github.com/Aerijo/autocomplete-latex/issues) on the repo page and I'll try to help. It's still a young package, so I wouldn't expect it to be perfect (yet :wink:).
 
-To define your own completions, see [Adding completions](#adding-completions).
+To define your own completions, see [Adding completions](#adding-completions). The provided defaults, especially for packages, are what I consider to be the most likely to be used by the user. They are not exhaustive, so you will need to check the documentation for more, and add extras to your personal completions list if desired.
 
 ## Configuration
 ### Settings
