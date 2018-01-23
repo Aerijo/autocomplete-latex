@@ -92,8 +92,11 @@ If you want file paths to be completed, you can use [`autocomplete-paths`](https
       ]
       prefixes: [
         "\\\\input{"
-        "\\\\include{"
-        "^%\\s*!T[eE]X\\s+(root|bib)\\s*=\\s*"
+          "\\\\include(?:only)?{([^\\}]*?\\,\\s*)*"
+          "\\\\includegraphics{" # not compatible with a prefixed image path
+          "\\\\(?:addbibresource|add(?:global|section)bib)(?:\\[.*?\\])?{"
+          # "\\\\bibliography{([^\\}]*?\\,\\s*)*" # Is deprecated, so shouldn't be used.
+          "^%\\s*!T[eE]X\\s+(root|bib)\\s*=\\s*"
       ]
       relative: true
       scopes: [
