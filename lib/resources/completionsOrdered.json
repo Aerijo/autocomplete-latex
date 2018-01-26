@@ -110,6 +110,23 @@
       ]
     },
     ".text.tex.latex .string.other.math": {
+      "primitive": [
+        {
+          "displayText": "\\textstyle",
+          "snippet": "\\\\textstyle",
+          "description": "Force text style maths"
+        },
+        {
+          "displayText": "\\displaystyle",
+          "snippet": "\\\\displaystyle",
+          "description": "Force display style maths"
+        },
+        {
+          "displayText": "\\limits",
+          "snippet": "\\\\limits",
+          "description": "Display integral limits above and below"
+        }
+      ],
       "method": [
         {
           "displayText": "\\frac",
@@ -123,9 +140,99 @@
           "description": "Sum with limits"
         },
         {
+          "displayText": "\\prod",
+          "snippet": "\\\\prod_{$1}^{$2}$3",
+          "description": "Product with limits"
+        },
+        {
           "displayText": "\\int",
           "snippet": "\\\\int_{$1}^{$2}$3",
           "description": "Integral with limits"
+        },
+        {
+          "displayText": "\\oint",
+          "snippet": "\\\\oint_{$1}$2",
+          "description": "Closed line integral"
+        },
+        {
+          "displayText": "\\log",
+          "snippet": "\\\\log"
+        },
+        {
+          "displayText": "\\exp",
+          "snippet": "\\\\exp"
+        },
+        {
+          "displayText": "\\sin",
+          "snippet": "\\\\sin"
+        },
+        {
+          "displayText": "\\cos",
+          "snippet": "\\\\cos"
+        },
+        {
+          "displayText": "\\tan",
+          "snippet": "\\\\tan"
+        },
+        {
+          "displayText": "\\infty",
+          "snippet": "\\\\infty"
+        },
+        {
+          "displayText": "\\to",
+          "snippet": "\\\\to"
+        },
+        {
+          "displayText": "\\det",
+          "snippet": "\\\\det"
+        },
+        {
+          "displayText": "\\theta",
+          "snippet": "\\\\theta"
+        },
+        {
+          "displayText": "\\bmod",
+          "snippet": "\\\\bmod"
+        },
+        {
+          "displayText": "\\pmod",
+          "snippet": "\\\\pmod"
+        },
+        {
+          "displayText": "\\equiv",
+          "snippet": "\\\\equiv"
+        },
+        {
+          "displayText": "\\sqrt",
+          "snippet": "\\\\sqrt$2{$1}$3"
+        },
+        {
+          "displayText": "\\mathrm",
+          "snippet": "\\\\mathrm{$1}$2"
+        },
+        {
+          "displayText": "\\langle",
+          "snippet": "\\\\langle"
+        },
+        {
+          "displayText": "\\rangle",
+          "snippet": "\\\\rangle"
+        },
+        {
+          "displayText": "\\lfloor",
+          "snippet": "\\\\lfloor"
+        },
+        {
+          "displayText": "\\rfloor",
+          "snippet": "\\\\rfloor"
+        },
+        {
+          "displayText": "\\lceil",
+          "snippet": "\\\\lceil"
+        },
+        {
+          "displayText": "\\rceil",
+          "snippet": "\\\\rceil"
         }
       ]
     }
@@ -619,6 +726,71 @@
           "snippet": "\\\\text{$1}$2",
           "description": "Text in mathmode",
           "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\binom",
+          "snippet": "\\\\binom{$1}{$2}$3",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\tbinom",
+          "snippet": "\\\\tbinom{$1}{$2}$3",
+          "description": "Text style binomial coefficient",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\dbinom",
+          "snippet": "\\\\dbinom{$1}{$2}$3",
+          "description": "Display style binomial coefficient",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\tfrac",
+          "snippet": "\\\\tfrac{$1}{$2}$3",
+          "description": "Text style fraction",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\dfrac",
+          "snippet": "\\\\dfrac{$1}{$2}$3",
+          "description": "Display style fraction",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\cfrac",
+          "snippet": "\\\\cfrac{$1}{$2}$3",
+          "description": "Continued fraction",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\iint",
+          "snippet": "\\\\iint_{$1}$2",
+          "description": "Double integral",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\iiint",
+          "snippet": "\\\\iiint_{$1}$2",
+          "description": "Triple integral",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\iiiint",
+          "snippet": "\\\\iiiint_{$1}$2",
+          "description": "Quadruple integral",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\idotsint",
+          "snippet": "\\\\idotsint_{$1}$2",
+          "description": "Dotted integral",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\substack",
+          "snippet": "\\\\substack",
+          "description": "Stack sum limits",
           "rightLabelHTML": "amsmath"
         }
       ]
