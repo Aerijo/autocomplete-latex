@@ -125,6 +125,21 @@
           "displayText": "\\limits",
           "snippet": "\\\\limits",
           "description": "Display integral limits above and below"
+        },
+        {
+          "displayText": "\\left",
+          "snippet": "\\\\left",
+          "description": "Autosize left delimiter"
+        },
+        {
+          "displayText": "\\right",
+          "snippet": "\\\\right",
+          "description": "Autosize right delimiter"
+        },
+        {
+          "displayText": "\\middle",
+          "snippet": "\\\\middle",
+          "description": "Autosize middle delimiter"
         }
       ],
       "method": [
@@ -133,6 +148,51 @@
           "snippet": "\\\\frac{$1}{$2}$3",
           "description": "Display math fraction",
           "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics"
+        },
+        {
+          "displayText": "\\big",
+          "snippet": "\\\\big",
+          "description": "Small big"
+        },
+        {
+          "displayText": "\\Big",
+          "snippet": "\\\\Big",
+          "description": "Medium small big"
+        },
+        {
+          "displayText": "\\bigg",
+          "snippet": "\\\\bigg",
+          "description": "Medium large big"
+        },
+        {
+          "displayText": "\\Bigg",
+          "snippet": "\\\\Bigg",
+          "description": "Large big"
+        },
+        {
+          "displayText": "\\pm",
+          "snippet": "\\\\pm",
+          "description": "Plus minus sign"
+        },
+        {
+          "displayText": "\\mp",
+          "snippet": "\\\\mp",
+          "description": "Minus plus sign"
+        },
+        {
+          "displayText": "\\neq",
+          "snippet": "\\\\neq",
+          "description": "Not equal to sign"
+        },
+        {
+          "displayText": "\\leq",
+          "snippet": "\\\\leq",
+          "description": "Less than or equal to sign"
+        },
+        {
+          "displayText": "\\req",
+          "snippet": "\\\\req",
+          "description": "Greater than or equal to sign"
         },
         {
           "displayText": "\\sum",
