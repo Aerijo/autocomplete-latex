@@ -20,6 +20,14 @@ Standard format:
 # Changelog
 <!-- ## Unreleased -->
 
+## 0.8.1
+#### Added
+- Integration with [`busy-signal`](https://atom.io/packages/busy-signal). Activities such as package name grabbing and completion regeneration set the status to busy while still being completed.
+- More math completions
+
+#### Fixed
+- Bug where package name finding would start a process for every letter typed until the first returned. Now it doesn't.
+
 ## 0.8.0
 #### Added
 - List of common packages (not used)
