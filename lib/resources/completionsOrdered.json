@@ -465,16 +465,32 @@
     ".text.tex.latex": {
       "method": [
         {
+          "displayText": "\\part",
+          "snippet": "\\\\part$2\\{$1\\}$3"
+        },
+        {
+          "displayText": "\\chapter",
+          "snippet": "\\\\chapter$2\\{$1\\}$3"
+        },
+        {
           "displayText": "\\section",
-          "snippet": "\\\\section\\{$1\\}$2"
+          "snippet": "\\\\section$2\\{$1\\}$3"
         },
         {
           "displayText": "\\subsection",
-          "snippet": "\\\\subsection\\{$1\\}$2"
+          "snippet": "\\\\subsection$2\\{$1\\}$3"
         },
         {
           "displayText": "\\subsubsection",
-          "snippet": "\\\\subsubsection\\{$1\\}$2"
+          "snippet": "\\\\subsubsection$2\\{$1\\}$3"
+        },
+        {
+          "displayText": "\\paragraph",
+          "snippet": "\\\\paragraph$2\\{$1\\}$3"
+        },
+        {
+          "displayText": "\\subparagraph",
+          "snippet": "\\\\subparagraph$2\\{$1\\}$3"
         },
         {
           "displayText": "\\clearpage",
@@ -777,6 +793,20 @@
           "snippet": "\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
           "description": "Begin amsmath align environment",
           "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations",
+          "rightLabelHTML": "amsmath"
+        },
+        {
+          "displayText": "\\equation",
+          "snippet": "\\\\begin{equation$2}\n\t$1$3\n\\\\end{equation$2}",
+          "rightLabelHTML": "amsmath"
+        }
+      ]
+    },
+    ".string.other.math": {
+      "snippet": [
+        {
+          "displayText": "\\aligned",
+          "snippet": "\\\\begin{aligned$2}\n\t$1$3\n\\\\end{aligned$2}",
           "rightLabelHTML": "amsmath"
         }
       ],
