@@ -77,6 +77,8 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
 
 - For path autocompletion, [`autocomplete-paths`](https://atom.io/packages/autocomplete-paths) must be installed and the steps in [Setup](#setup) must be followed.
 
+- [optional] [`busy-signal`](https://atom.io/packages/busy-signal) can be installed to have a visual cue for when this package is doing something. For example, it will show a busy state when gathering available LaTeX package names.
+
 ### Setup
 You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc. For a more customised use, see [Adding completions](#adding-completions).
 
