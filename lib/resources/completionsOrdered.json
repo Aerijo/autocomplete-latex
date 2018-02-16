@@ -109,7 +109,7 @@
         }
       ]
     },
-    ".text.tex.latex .string.other.math": {
+    ".text.tex.latex .markup.other.math": {
       "primitive": [
         {
           "displayText": "\\textstyle",
@@ -802,7 +802,7 @@
         }
       ]
     },
-    ".string.other.math": {
+    ".markup.other.math": {
       "snippet": [
         {
           "displayText": "\\aligned",
