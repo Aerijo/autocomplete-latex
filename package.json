@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-latex",
   "main": "./lib/autocomplete-latex",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "A provider of LaTeX autocompletions",
   "keywords": [
     "latex",
