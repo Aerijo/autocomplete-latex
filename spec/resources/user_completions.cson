@@ -1,0 +1,61 @@
+".text.tex.latex": {
+  snippet: [
+    {
+      displayText: "$"
+      snippet: "\\\\( $1 \\\\)$0"
+    }
+    {
+      displayText: "\\minted"
+      snippet: "\\\\begin{minted}$2{$1}\n\t$3\n\\\\end{minted}$4"
+    }
+    {
+      displayText: "\\altNew"
+      snippet: "overrides"
+    }
+    {
+      displayText: "\\altClear"
+      snippet: "overrides as well"
+    }
+    {
+      comment: "Though not recommended type can be explicitly overridden"
+      type: "constant"
+      displayText: "\\LaTeX"
+      snippet: "\\{\\\\LaTeX\\}$1"
+      description: "Builtin LaTeX command + protective braces"
+    }
+    {
+      comment: "Though not recommended type can be explicitly overridden"
+      type: "constant"
+      displayText: "\\TeX"
+      snippet: "\\{\\\\TeX\\}$1"
+      description: "Builtin TeX command + protective braces"
+    }
+    {
+      displayText: "\\list"
+      snippet: "\\\\begin{itemize}\n\t\\\\item $1\n\\\\end{itemize}"
+      description: "Synonym for `itemize`"
+    }
+  ]
+  constant: [
+    {
+      displayText: "\\hfil"
+      snippet: "\\\\hfil"
+      description: "1st order infinity"
+    }
+    {
+      displayText: "\\hfill"
+      snippet: "\\\\hfill"
+      description: "2nd order infinity"
+    }
+    {
+      displayText: "\\vfil"
+      snippet: "\\\\vfil"
+      description: "1st order infinity"
+    }
+    {
+      displayText: "\\vfill"
+      snippet: "\\\\vfill"
+      description: "2nd order infinity"
+    }
+  ]
+}
