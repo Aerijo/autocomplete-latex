@@ -101,11 +101,13 @@
       "snippet": [
         {
           "displayText": "$",
-          "snippet": "\\\\($1\\\\)"
+          "snippet": "\\\\($1\\\\)",
+          "rightLabelHTML": "$ -> \\(...\\)"
         },
         {
           "displayText": "$$",
-          "snippet": "\\\\[\n\t$1\n\\\\]"
+          "snippet": "\\\\[\n\t$1\n\\\\]",
+          "rightLabelHTML": "$$ -> \\[...\\]"
         }
       ]
     },
@@ -632,42 +634,42 @@
       "method": [
         {
           "displayText": "\\ang",
-          "snippet": "\\\\ang$2{${1:<angle>}}$0",
+          "snippet": "\\\\ang{$1}$0",
           "rightLabelHTML": "siunitx"
         },
         {
           "displayText": "\\num",
-          "snippet": "\\\\num$2{${1:<number>}}$0",
+          "snippet": "\\\\num{$1}$0",
           "rightLabelHTML": "siunitx"
         },
         {
           "displayText": "\\si",
-          "snippet": "\\\\si$2{${1:<unit>}}$0",
+          "snippet": "\\\\si{$1}$0",
           "rightLabelHTML": "siunitx"
         },
         {
           "displayText": "\\SI",
-          "snippet": "\\\\SI$3{${1:<number>}}$4{${2:<unit>}}$0",
+          "snippet": "\\\\SI{$1}{$2}$0",
           "rightLabelHTML": "siunitx"
         },
         {
           "displayText": "\\numlist",
-          "snippet": "\\\\numlist$2{${1:<numbers>}}$0",
+          "snippet": "\\\\numlist{$1}$0",
           "rightLabelHTML": "siunitx"
         },
         {
           "displayText": "\\numrange",
-          "snippet": "\\\\numrange$3{${1:<number1>}}{${2:<number2>}}$0",
+          "snippet": "\\\\numrange{$1}{$2}$0",
           "rightLabelHTML": "siunitx"
         },
         {
           "displayText": "\\SIlist",
-          "snippet": "\\\\SIlist$3{${1:<numbers>}}{${2:<unit>}}$0",
+          "snippet": "\\\\SIlist{$1}{$2}$0",
           "rightLabelHTML": "siunitx"
         },
         {
           "displayText": "\\SIrange",
-          "snippet": "\\\\SIrange$4{${1:<number1>}}{${2:<number2>}}{${3:<unit>}}$0",
+          "snippet": "\\\\SIrange{$1}{$2}{$3}$0",
           "rightLabelHTML": "siunitx"
         },
         {
