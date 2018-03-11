@@ -300,7 +300,7 @@
     }
   },
   "tikz": {
-    "text.tex.latex": {
+    ".text.tex.latex": {
       "snippet": [
         {
           "displayText": "\\tikzpicture",
