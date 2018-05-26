@@ -45,12 +45,13 @@ Further functionality includes:
 
 
 ### Why use this package?
-Presumably, you're here because you want to be able to autocomplete common commands you use. Yes, snippets can do this, but they can be difficult to remember, especially if used infrequently. [`autocomplete-snippets`](https://atom.io/packages/autocomplete-snippets) is a handy package that displays most snippets in a popup as you type, but it has one major flaw when it comes to LaTeX documents: it doesn't support punctuation.
+Presumably, you're here because you want to be able to autocomplete common commands you use. Yes, snippets can do this, but they can be difficult to remember, especially if used infrequently. [`autocomplete-snippets`](https://atom.io/packages/autocomplete-snippets) is a handy package that displays most snippets in a popup as you type, ~~but it has one major flaw when it comes to LaTeX documents: it doesn't support punctuation.~~ _I think it does now_
 
-Most of what you type in LaTeX is just regular words. It gets annoying when you're typing, and a popup menu appears every other word. This package only shows suggestions when a `\` is typed; this makes completions easy to access but kept out of the way during normal use.
+In any case, I found having a package dedicated to LaTeX completions to be quite handy. Please share ideas for improvements you'd like to see, and I'll do my best to implement it.
 
 ## Features
 - Comes with a set of common completions
+  - Selectively enable / disable these by group. I aim to add even more fine tuning in the future.
 - Specify the scope of each set of completions
 - Supports user provided completions
 - Completes [magic comments](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding)
@@ -68,16 +69,15 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
 ## Usage
 ### Requirements
 
-- The package [`autocomplete-plus`](https://atom.io/packages/autocomplete-plus) be activated. This is a builtin package, so no additional download required.
+- The packages [`autocomplete-plus`](https://atom.io/packages/autocomplete-plus) and [`autocomplete-snippets`](https://atom.io/packages/autocomplete-snippets) be activated. These are builtin packages, so no additional downloads required.
 
-- A grammar scoping package for LaTeX. These are the ones titled `language-something`. The most popular one is [`language-latex`](https://atom.io/packages/language-latex), but [my own](https://atom.io/packages/language-latex2e) will also work. I haven't tested with any others that scope LaTeX, but they should work if they follow established conventions.
-  - Note: If you have syntax highlighting setup, you probably already have one installed.
+- A grammar scoping package for LaTeX. These are the ones titled `language-something`. The most popular one is [`language-latex`](https://atom.io/packages/language-latex), but [my own](https://atom.io/packages/language-latex2e) will also work. If you have another one you'd like to use, make an issue and I'll add support for it.
 
 - For package autocompletion, the command line tool `tlmgr` must be installed. It comes with TeX Live and MacTeX.
 
 - For path autocompletion, [`autocomplete-paths`](https://atom.io/packages/autocomplete-paths) must be installed and the steps in [Setup](#setup) must be followed.
 
-- [optional] [`busy-signal`](https://atom.io/packages/busy-signal) can be installed to have a visual cue for when this package is doing something. For example, it will show a busy state when gathering available LaTeX package names.
+- [optional] [`busy-signal`](https://atom.io/packages/busy-signal) can be installed to have a visual cue for when this package is doing something. For example, it will show a busy state when gathering available LaTeX package names. This package will prompt you to install it, but that can be permanently dismissed without issue.
 
 ### Setup
 You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc. For a more customised use, see [Adding completions](#adding-completions).
@@ -94,22 +94,51 @@ If you want file paths to be completed, you can use [`autocomplete-paths`](https
       ]
       prefixes: [
         "\\\\input{"
-          "\\\\include(?:only)?{([^\\}]*?\\,\\s*)*"
-          "\\\\includegraphics{" # not compatible with a prefixed image path
-          "\\\\(?:addbibresource|add(?:global|section)bib)(?:\\[.*?\\])?{"
-          # "\\\\bibliography{([^\\}]*?\\,\\s*)*" # Is deprecated, so shouldn't be used.
-          "^%\\s*!T[eE]X\\s+(root|bib)\\s*=\\s*"
+        "\\\\include(?:only)?{([^\\}]*?\\,\\s*)*"
+        "\\\\(?:addbibresource|add(?:global|section)bib)(?:\\[.*?\\])?{"
+        "^%\\s*!T[eE]X\\s+(root|bib)\\s*=\\s*"
       ]
       relative: true
       scopes: [
         "text.tex.latex"
+        "text.tex.latex.tikz"
+      ]
+    }
+    {
+      extensions: [
+        ".jpeg"
+        ".jpg"
+        ".png"
+      ]
+      prefixes: [
+        "\\\\includegraphics(\\[.*?\\])?{"
+      ]
+      relative: true
+      scopes: [
+        "text.tex.latex"
+        "text.tex.latex.tikz"
+      ]
+    }
+    {
+      extensions: [
+        ".*"
+      ]
+      prefixes: [
+        "\\\\inputminted\\{.*\\}\\{"
+      ]
+      relative: true
+      scopes: [
+        "text.tex.latex"
+        "text.tex.latex.tikz"
       ]
     }
   ]
 ```
 
+If you have improvements, or a better way to do this, please let me know.
+
 ### In document
-As mentioned above, completions will automatically appear when typing. These suggestions are filtered and ranked according to the prefix, which is defined as a `\` followed by any number of letters (`\\[a-zA-Z]*` for you [regex](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) fans) up until the cursor. If any non-letters are present (eg. number or space) it will no longer show the completions and will wait until a valid prefix is reached again.
+As mentioned above, completions will automatically appear when typing. These suggestions are filtered and ranked according to the prefix, which is defined as a `\` followed by any number of letters up until the cursor. If any non-letters are present (eg. number or space) it will no longer show the completions and will wait until a valid prefix is reached again.
 
   - **Note**: There are special cases where it will also activate, including after an `!` and an `@`. This is to support [magic comment](https://tex.stackexchange.com/questions/78101/when-and-why-should-i-use-tex-ts-program-and-tex-encoding) completions and markdown-like citations. It will also activate inside a `\usepackage{}` command, giving a (hopefully) exhaustive list of all package installed on your distribution.
 
@@ -117,19 +146,21 @@ The current scope also affects which completions appear, so you'll only see comm
 
  - **Tip**: the completions will appear if the current prefix is an ordered subset of the potential completion. This means that while you _could_ type `\subsub` to get the `\subsubsection` completion, you could just type `\sbb` instead.
 
-If something unexpected is occurring, check your [settings](#settings). Make sure all the [requirements](#requirements) are also met. If the issue persists, [open an issue](https://github.com/Aerijo/autocomplete-latex/issues) on the repo page and I'll try to help. It's still a young package, so I wouldn't expect it to be perfect (yet :wink:).
+If something unexpected is occurring, check your [settings](#settings). Make sure all the [requirements](#requirements) are also met. If the issue persists, [open an issue](https://github.com/Aerijo/autocomplete-latex/issues) on the repository page and I'll try to help.
 
-To define your own completions, see [Adding completions](#adding-completions). The provided defaults, especially for packages, are what I consider to be the most likely to be used by the user. They are not exhaustive, so you will need to check the documentation for more, and add extras to your personal completions list if desired.
+To define your own completions, see [Adding completions](#adding-completions). The provided defaults, especially for packages, are what I consider to be widely applicable for many users. They are not exhaustive, so you will need to check the documentation for more, and add extras to your personal completions list if desired.
 
 ## Configuration
 ### Settings
-In the settings view, there are ~~several~~ many options available to customise how this package works. If changing a setting does not appear to work, try restarting Atom.
+In the settings view, there are options available to customise how this package works. If changing a setting does not appear to work, try restarting Atom.
 
 #### User completions path
-Use this to provide the path to your own completions. Ensure it is an absolute path, and that you include the file extension as well. More info about what this file can be is found in [Adding completions](#adding-completions) and `./docs/`.
+Use this to provide the path to your own completions. Ensure that you include the file extension as well. More info about what this file can be is found in [Adding completions](#adding-completions) and `./docs/`.
+
+- Support was recently added for using `~` as an alias for the system home folder. If it's not working for you, please let me know.
 
 #### Enable default completions
-This option allows you to disable the default LaTeX completions. This may be preferable if you have a highly customised setup. Note that user completions will override the default completions if both share the same display text.
+This option allows you to disable all the default LaTeX completions. This may be preferable if you have a highly customised setup. Note that user completions will always override the default completions if both share the same display text.
 
 #### Enable builtin provider
 Use this to allow the completions provided by `autocomplete-plus`. These are not controlled by this package, so settings here will not affect them. They are the words taken from open buffers that appear as you type.
@@ -137,8 +168,12 @@ Use this to allow the completions provided by `autocomplete-plus`. These are not
 #### Enable citation completions
 This package supports markdown-like syntax for citations. When enabled, typing `@` followed by non-space characters will show completions scraped from the `.bib` file, if it can be located. The file path must be given somewhere in the current file for this to work, and the magic comment `% !TEX bib = ...` is supported.
 
+- If you have issues with this, please let me know. Be sure to include the precise file contents to reproduce the issue, along with the relative locations of all the files.
+
 #### Enable package completions
 An attempt will be made to find all packages installed by TeX Live and present them when inside a `\usepackage{}` command. This will only work if the `tlmgr` command is installed, so MikTeX is not supported (yet).
+
+- The list also contains a lot of "junk", but I have no way of filtering out files that aren't meant to be used directly. If you know how, let me know.
 
 #### Minimum prefix length
 Determines how long the prefix must be until suggestions will appear. Default value is that of `autocomplete-plus`. Making it greater will reduce 'noise', but decrease effectiveness (because lessening typing is what this is all about; well, that and reducing typos).
@@ -162,7 +197,7 @@ will disable completions if the current scope is part of a comment _or_ in math 
 The format for what `@...` should be replaced with. All backslashes must be doubled up, and a single `$` must be somewhere to represent where the citation text will go.
 
 #### :warning: Completion regex
-If you don't know what [`regex`](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) is, don't touch this setting. If you change it, make sure to put it back to the default. You've been warned.
+If you don't know what [regex](https://www.marksanborn.net/howto/learning-regular-expressions-for-beginners-the-basics/) is, don't touch this setting. If you change it, make sure to put it back to the default. You've been warned.
 
 If you know what you're doing, this setting determines which characters are considered a valid prefix to the completion. The `$` represents the current cursor position, and it can look back as far as the beginning of the line. Backslashes do __not__ need to be doubled up.
 
@@ -171,39 +206,19 @@ Same as above, but for `@...` completions.
 
 ### Commands
 #### Clear cache
-Introduced in v0.6.0, this command manually empties the cached completions. Use this to make sure any new completions you add are properly added to the cache.
+Introduced in v0.6.0, this command manually empties the cached completions. Redundant now, but may be useful if trying to debug.
+
+#### Regenerate completions
+Stronger version of `Clear cache`. Also not normally needed, but may help if you find an issue with the completion list not updating properly.
 
 ### Adding completions
 **Not stable**: Look in docs for current format.
-- Note: I'm still not satisfied with the current format. Expect it to continue to change to make organising related sections better.
-  - Eg. I want to be able to make groups that can be enabled/disabled easily.
 
-- Also, the file can be `.js` as well, so long as it's export is an object with the same properties of the `.json`. Eg.
+- Supports `.json`, `.cson`, and `.js` file types. The JS file must export the completions object like shown
 
 ```js
-// in file userCompletions.js
-const completions = {};
-/*
-  some javascript code
-*/
-completions[".text.tex.latex"] = {
-  "snippet": [
-    {
-      "displayText": "\\myCompletion",
-      "snippet": "\\\\expands to string of text and places cursor here -> $1 <-",
-      "description": "Example completion"
-    },
-    {
-      "comment": "Though not recommended, type can be explicitly overridden",
-      "type": "constant",
-      "displayText": "\\LaTeX",
-      "snippet": "\\{\\\\LaTeX\\}$1",
-      "description": "Builtin LaTeX command + protective braces"
-    }
-  ]
+const completions = {
+  // Fill in completions
 }
-/*
-  other javascript code
-*/
 module.exports = completions
 ```
