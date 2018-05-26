@@ -20,6 +20,39 @@ Standard format:
 # Changelog
 <!-- ## Unreleased -->
 
+## 0.9.0
+#### Added
+- Selectively enable default completions by group
+- CSON support for user completions
+- Example user completions (old format)
+- Support `~` as alias for home in completions path
+- Check if scope has changed; if not, just return the last set of completions
+- `gather` environment added to defaults
+
+
+#### Changed
+- The entry point file name from `autocomplete-latex.js` to `main.js`
+- Default arguments of completions have been removed
+- Overhauled internal code. Commented extensively to help beginners understand what is happening (and myself too)
+- No longer asks to reload Atom when regenerating completions
+- Scope keys are now fully handled by [`first-mate`](https://github.com/atom/first-mate). Internal caching and scope handling methods changed and updated appropriately.
+
+#### Fixed
+- Better bibliography path finding
+
+#### Removed
+- Serialisation of data. Was too wasteful and unnecessary
+
+
+## 0.8.3
+#### Fixed
+- Missing dependencies
+
+## 0.8.2
+#### Changed
+- Updated some default completions
+- Order settings
+
 ## 0.8.1
 #### Added
 - Integration with [`busy-signal`](https://atom.io/packages/busy-signal). Activities such as package name grabbing and completion regeneration set the status to busy while still being completed.
