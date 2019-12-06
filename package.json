@@ -23,7 +23,7 @@
   "dependencies": {
     "fuzzaldrin-plus": "^0.6.0",
     "lodash": "^4.17.4",
-    "first-mate": "^7.1.0",
+    "first-mate-prebuilt": "7.4.1",
     "atom-package-deps": "^4.6.0",
     "season": "^6.0.2"
   },
