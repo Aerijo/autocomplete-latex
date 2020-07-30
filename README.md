@@ -76,7 +76,7 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
 
 - The packages [`autocomplete-plus`](https://atom.io/packages/autocomplete-plus) and [`autocomplete-snippets`](https://atom.io/packages/autocomplete-snippets) be activated. These are builtin packages, so no additional downloads required.
 
-- A grammar scoping package for LaTeX. These are the ones titled `language-something`. The most popular one is [`language-latex`](https://atom.io/packages/language-latex), but [my own](https://atom.io/packages/language-latex2e) will also work. If you have another one you'd like to use, make an issue and I'll add support for it.
+- A grammar scoping package for LaTeX. These are the ones titled `language-something`. The most popular one is [`language-latex`](https://atom.io/packages/language-latex), but [my own](https://atom.io/packages/language-latex2e) or any other LaTeX one should also work.
 
 - For package autocompletion, the command line tool `tlmgr` must be installed. It comes with TeX Live and MacTeX, but I believe it can be installed when using MiKTeX too.
 
