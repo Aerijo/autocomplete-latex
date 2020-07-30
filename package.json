@@ -137,33 +137,33 @@
           "type": "boolean",
           "default": true
         },
-        "tikz": {
-          "order": 4,
-          "title": "tikz",
-          "type": "boolean",
-          "default": true
-        },
         "imports": {
-          "order": 5,
+          "order": 4,
           "title": "Imports (usepackage, input, etc.)",
           "type": "boolean",
           "default": true
         },
         "generalEnvironments": {
-          "order": 6,
+          "order": 5,
           "title": "General environments (figure, table, etc.)",
           "type": "boolean",
           "default": true
         },
         "sectioning": {
-          "order": 7,
+          "order": 6,
           "title": "Sectioning commands (section, newpage, etc.)",
           "type": "boolean",
           "default": true
         },
         "debugging": {
-          "order": 8,
+          "order": 7,
           "title": "Tracing suite (tracingmacros, etc.)",
+          "type": "boolean",
+          "default": true
+        },
+        "amsmath": {
+          "order": 8,
+          "title": "amsmath",
           "type": "boolean",
           "default": true
         },
@@ -173,33 +173,33 @@
           "type": "boolean",
           "default": true
         },
-        "siunitx": {
-          "order": 10,
-          "title": "siunitx",
-          "type": "boolean",
-          "default": true
-        },
-        "xcolor": {
-          "order": 11,
-          "title": "xcolor",
-          "type": "boolean",
-          "default": true
-        },
         "hyperref": {
-          "order": 12,
+          "order": 10,
           "title": "hyperref",
           "type": "boolean",
           "default": true
         },
-        "amsmath": {
-          "order": 13,
-          "title": "amsmath",
+        "minted": {
+          "order": 11,
+          "title": "minted",
           "type": "boolean",
           "default": true
         },
-        "minted": {
+        "siunitx": {
+          "order": 12,
+          "title": "siunitx",
+          "type": "boolean",
+          "default": true
+        },
+        "tikz": {
+          "order": 13,
+          "title": "tikz",
+          "type": "boolean",
+          "default": true
+        },
+        "xcolor": {
           "order": 14,
-          "title": "minted",
+          "title": "xcolor",
           "type": "boolean",
           "default": true
         }
