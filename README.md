@@ -178,6 +178,7 @@ This package supports markdown-like syntax for citations. When enabled, typing `
 
 An attempt will be made to find all packages installed by TeX Live and present them when inside a `\usepackage{}` command. This will only work if the `tlmgr` command is installed.
 
+- The right hand side text is the name of the package on CTAN if it does not match the name of the package file (it's packages all the way down -\_-).
 - The list also contains a lot of "junk", but I have no way of filtering out files that aren't meant to be used directly. If you know how, let me know.
 
 #### Minimum prefix length
