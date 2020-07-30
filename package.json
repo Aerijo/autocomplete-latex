@@ -64,12 +64,6 @@
       "default": "",
       "order": 1
     },
-    "enableDefaultCompletions": {
-      "description": "Disable this if you want to define all the suggestions manually; this will prevent clashes with completions you define yourself. See README.md for more info.",
-      "type": "boolean",
-      "default": true,
-      "order": 2
-    },
     "enablePackageCompletions": {
       "description": "Enable to suggest package names inside of \\usepackage{}. Requires `tlmgr` to be installed.",
       "type": "boolean",
@@ -97,31 +91,31 @@
     },
     "disableForScopeSelector": {
       "title": "Disabled Scopes",
-      "description": "Disable completions in these scopes. Comma separated. Restart atom for changes to take effect.",
+      "description": "Disable completions in these scopes. Comma separated. Restart Atom for changes to take effect.",
       "type": "string",
       "default": ".comment",
       "order": 6
     },
     "citationFormat": {
-      "description": "What will be inserted around the citation when activated from a `@...`. See README.md for details.",
+      "description": "What will be inserted around the citation when activated from a `@...`. ${cite} means the citation key, otherwise acts as a snippet.",
       "type": "string",
       "default": "\\\\autocite{${cite}}",
       "order": 7
     },
     "commandCompletionRegex": {
-      "description": " ⚠️ Advanced: use this to support custom prefix patterns",
+      "description": " ⚠️ Advanced: use this to define a custom general prefix pattern.",
       "type": "string",
       "default": "[\\\\\\!]\\w*$|\\$+$",
       "order": 8
     },
     "citationCompletionRegex": {
-      "description": " ⚠️ Advanced: use this to support custom prefix patterns for `@...`",
+      "description": " ⚠️ Advanced: use this to define a custom citation prefix pattern.",
       "type": "string",
       "default": "@\\S*$",
       "order": 9
     },
     "enabledDefaultCompletions": {
-      "description": "Selectively enable completions based on package and function",
+      "description": "Selectively enable builtin completions based on package and function",
       "type": "object",
       "order": 10,
       "properties": {
