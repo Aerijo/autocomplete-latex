@@ -1,7 +1,7 @@
 {
   "name": "autocomplete-latex",
   "main": "./lib/main",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "description": "A provider of LaTeX autocompletions",
   "keywords": [
     "latex",
@@ -14,35 +14,202 @@
   "repository": "https://github.com/Aerijo/autocomplete-latex",
   "license": "MIT",
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.49.0 <2.0.0"
   },
   "activationHooks": [
+    "text.tex.latex:root-scope-used",
     "language-latex:grammar-used",
     "language-latex2e:grammar-used"
   ],
   "dependencies": {
-    "fuzzaldrin-plus": "^0.6.0",
-    "lodash": "^4.17.4",
-    "first-mate-prebuilt": "7.4.1",
-    "atom-package-deps": "^4.6.0",
-    "season": "^6.0.2"
+    "atom-package-deps": "4.6.0",
+    "csv-parse": "4.11.1",
+    "fuzzaldrin-plus": "0.6.0",
+    "scoped-property-store": "0.17.0",
+    "season": "6.0.2"
   },
   "providedServices": {
     "autocomplete.provider": {
       "versions": {
-        "3.0.0": "getProvider"
+        "4.0.0": "getAutocompleteProvider"
       }
     }
   },
   "consumedServices": {
     "busy-signal": {
       "versions": {
-        "1.0.0": "consumeSignal"
+        "1.0.0": "consumeBusySignal"
+      }
+    },
+    "atom-ide-busy-signal": {
+      "versions": {
+        "0.1.0": "consumeAtomIdeBusySignal"
       }
     }
   },
   "package-deps": [
     "busy-signal",
     "autocomplete-paths"
-  ]
+  ],
+  "devDependencies": {
+    "@types/atom": "^1.40.4",
+    "@types/fuzzaldrin-plus": "^0.6.1",
+    "@types/node": "^14.0.26",
+    "prettier": "^2.0.5"
+  },
+  "configSchema": {
+    "userCompletionsPath": {
+      "description": "Use this if you want to add your own custom completions that are not present in the default set. See docs for syntax.",
+      "type": "string",
+      "default": "",
+      "order": 1
+    },
+    "enableDefaultCompletions": {
+      "description": "Disable this if you want to define all the suggestions manually; this will prevent clashes with completions you define yourself. See README.md for more info.",
+      "type": "boolean",
+      "default": true,
+      "order": 2
+    },
+    "enablePackageCompletions": {
+      "description": "Enable to suggest package names inside of \\usepackage{}. Requires `tlmgr` to be installed.",
+      "type": "boolean",
+      "default": true,
+      "order": 2.5
+    },
+    "enableCitationCompletions": {
+      "description": "Experimental: typing `@...` will bring up a list of references scraped from the .bib file.",
+      "type": "boolean",
+      "default": true,
+      "order": 3
+    },
+    "enableBuiltinProvider": {
+      "description": "Turning this on will allow suggestions from the builtin (`autocomplete-plus`) provider to appear.",
+      "type": "boolean",
+      "default": false,
+      "order": 4
+    },
+    "minPrefixLength": {
+      "title": "Minimum Prefix Length",
+      "description": "This value will suppress suggestions from appearing until the prefix is at least as long (includes the \\\\)",
+      "type": "integer",
+      "default": 2,
+      "order": 5
+    },
+    "disableForScopeSelector": {
+      "title": "Disabled Scopes",
+      "description": "Disable completions in these scopes. Comma separated. Restart atom for changes to take effect.",
+      "type": "string",
+      "default": ".comment",
+      "order": 6
+    },
+    "citationFormat": {
+      "description": "What will be inserted around the citation when activated from a `@...`. See README.md for details.",
+      "type": "string",
+      "default": "\\\\autocite{${cite}}",
+      "order": 7
+    },
+    "commandCompletionRegex": {
+      "description": " ⚠️ Advanced: use this to support custom prefix patterns",
+      "type": "string",
+      "default": "[\\\\\\!]\\w*$|\\$+$",
+      "order": 8
+    },
+    "citationCompletionRegex": {
+      "description": " ⚠️ Advanced: use this to support custom prefix patterns for `@...`",
+      "type": "string",
+      "default": "@\\S*$",
+      "order": 9
+    },
+    "enabledDefaultCompletions": {
+      "description": "Selectively enable completions based on package and function",
+      "type": "object",
+      "order": 10,
+      "properties": {
+        "magicComments": {
+          "order": 1,
+          "title": "Magic comments",
+          "type": "boolean",
+          "default": true
+        },
+        "formatting": {
+          "order": 2,
+          "title": "Formatting (bold, italic, etc.)",
+          "type": "boolean",
+          "default": true
+        },
+        "generalMath": {
+          "order": 3,
+          "title": "General math (frac, sum, etc.)",
+          "type": "boolean",
+          "default": true
+        },
+        "tikz": {
+          "order": 4,
+          "title": "tikz",
+          "type": "boolean",
+          "default": true
+        },
+        "imports": {
+          "order": 5,
+          "title": "Imports (usepackage, input, etc.)",
+          "type": "boolean",
+          "default": true
+        },
+        "generalEnvironments": {
+          "order": 6,
+          "title": "General environments (figure, table, etc.)",
+          "type": "boolean",
+          "default": true
+        },
+        "sectioning": {
+          "order": 7,
+          "title": "Sectioning commands (section, newpage, etc.)",
+          "type": "boolean",
+          "default": true
+        },
+        "debugging": {
+          "order": 8,
+          "title": "Tracing suite (tracingmacros, etc.)",
+          "type": "boolean",
+          "default": true
+        },
+        "biblatex": {
+          "order": 9,
+          "title": "biblatex",
+          "type": "boolean",
+          "default": true
+        },
+        "siunitx": {
+          "order": 10,
+          "title": "siunitx",
+          "type": "boolean",
+          "default": true
+        },
+        "xcolor": {
+          "order": 11,
+          "title": "xcolor",
+          "type": "boolean",
+          "default": true
+        },
+        "hyperref": {
+          "order": 12,
+          "title": "hyperref",
+          "type": "boolean",
+          "default": true
+        },
+        "amsmath": {
+          "order": 13,
+          "title": "amsmath",
+          "type": "boolean",
+          "default": true
+        },
+        "minted": {
+          "order": 14,
+          "title": "minted",
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  }
 }

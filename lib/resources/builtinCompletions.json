@@ -1,117 +1,117 @@
 {
   "magicComments": {
-    ".text.tex.latex": {
+    "*": {
       "property": [
         {
           "displayText": "!cleanPatterns",
-          "snippet": "% !TEX cleanPatterns = $1",
+          "snippet": "% !TEX cleanPatterns = $0",
           "description": "Specify patterns to use for latex:clean"
         },
         {
           "displayText": "!enableSynctex",
-          "snippet": "% !TEX enableSynctex = $1",
+          "snippet": "% !TEX enableSynctex = $0",
           "description": "Override synctex setting"
         },
         {
           "displayText": "!enableExtendedBuildMode",
-          "snippet": "% !TEX enableExtendedBuildMode = $1",
+          "snippet": "% !TEX enableExtendedBuildMode = $0",
           "description": "Override extended build mode setting"
         },
         {
           "displayText": "!enableShellEscape",
-          "snippet": "% !TEX enableShellEscape = $1",
+          "snippet": "% !TEX enableShellEscape = $0",
           "description": "Override shell escape setting"
         },
         {
           "displayText": "!engine",
-          "snippet": "% !TEX engine = $1",
+          "snippet": "% !TEX engine = $0",
           "description": "Set engine to compile with"
         },
         {
           "displayText": "!moveResultToSourceDirectory",
-          "snippet": "% !TEX moveResultToSourceDirectory = $1",
+          "snippet": "% !TEX moveResultToSourceDirectory = $0",
           "description": "Override move result to source directory setting"
         },
         {
           "displayText": "!outputFormat",
-          "snippet": "% !TEX outputFormat = $1",
+          "snippet": "% !TEX outputFormat = $0",
           "description": "Override the output format"
         },
         {
           "displayText": "!jobNames",
-          "snippet": "% !TEX jobNames = $1",
+          "snippet": "% !TEX jobNames = $0",
           "description": "Control the number and names of build jobs"
         },
         {
           "displayText": "!outputDirectory",
-          "snippet": "% !TEX outputDirectory = $1",
+          "snippet": "% !TEX outputDirectory = $0",
           "description": "Specify the output directory that should be used"
         },
         {
           "displayText": "!producer",
-          "snippet": "% !TEX producer = $1",
+          "snippet": "% !TEX producer = $0",
           "description": "Override the PDF producer"
         },
         {
           "displayText": "!root",
-          "snippet": "% !TEX root = $1",
+          "snippet": "% !TEX root = $0",
           "description": "Specify the root file that should be built"
         },
         {
           "displayText": "!syntax",
-          "snippet": "% !TEX syntax = $1",
+          "snippet": "% !TEX syntax = $0",
           "description": "Change the current syntax highlighting"
         },
         {
           "displayText": "!bib",
-          "snippet": "% !TEX bib = $1",
+          "snippet": "% !TEX bib = $0",
           "description": "Specify bibliography file path"
         }
       ]
     }
   },
   "formatting": {
-    ".text.tex.latex": {
+    "*": {
       "method": [
         {
           "displayText": "\\textbf",
-          "snippet": "\\\\textbf{$1}$2",
+          "snippet": "\\\\textbf{$1}$0",
           "description": "Bold text"
         },
         {
           "displayText": "\\textit",
-          "snippet": "\\\\textit{$1}$2",
+          "snippet": "\\\\textit{$1}$0",
           "description": "Italic text"
         },
         {
           "displayText": "\\emph",
-          "snippet": "\\\\emph{$1}$2",
+          "snippet": "\\\\emph{$1}$0",
           "description": "Emphasise text"
         },
         {
           "displayText": "\\underline",
-          "snippet": "\\\\underline{$1}$2",
+          "snippet": "\\\\underline{$1}$0",
           "description": "Underline text"
         }
       ]
     }
   },
   "generalMath": {
-    ".text.tex.latex": {
+    "*": {
       "snippet": [
         {
           "displayText": "$",
-          "snippet": "\\\\($1\\\\)",
+          "snippet": "\\\\($1\\\\)$0",
           "rightLabelHTML": "$ -> \\(...\\)"
         },
         {
           "displayText": "$$",
-          "snippet": "\\\\[\n\t$1\n\\\\]",
+          "snippet": "\\\\[\n\t$0\n\\\\]",
           "rightLabelHTML": "$$ -> \\[...\\]"
         }
       ]
     },
-    ".text.tex.latex .markup.other.math": {
+    ".markup.other.math, .string.other.math": {
       "primitive": [
         {
           "displayText": "\\textstyle",
@@ -147,7 +147,7 @@
       "method": [
         {
           "displayText": "\\frac",
-          "snippet": "\\\\frac{$1}{$2}$3",
+          "snippet": "\\\\frac{$1}{$2}$0",
           "description": "Display math fraction",
           "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics"
         },
@@ -198,22 +198,22 @@
         },
         {
           "displayText": "\\sum",
-          "snippet": "\\\\sum_{$1}^{$2}$3",
+          "snippet": "\\\\sum_{$1}^{$2}$0",
           "description": "Sum with limits"
         },
         {
           "displayText": "\\prod",
-          "snippet": "\\\\prod_{$1}^{$2}$3",
+          "snippet": "\\\\prod_{$1}^{$2}$0",
           "description": "Product with limits"
         },
         {
           "displayText": "\\int",
-          "snippet": "\\\\int_{$1}^{$2}$3",
+          "snippet": "\\\\int_{$1}^{$2}$0",
           "description": "Integral with limits"
         },
         {
           "displayText": "\\oint",
-          "snippet": "\\\\oint_{$1}$2",
+          "snippet": "\\\\oint_{$1}$0",
           "description": "Closed line integral"
         },
         {
@@ -266,11 +266,11 @@
         },
         {
           "displayText": "\\sqrt",
-          "snippet": "\\\\sqrt$2{$1}$3"
+          "snippet": "\\\\sqrt$1{$2}$0"
         },
         {
           "displayText": "\\mathrm",
-          "snippet": "\\\\mathrm{$1}$2"
+          "snippet": "\\\\mathrm{$1}$0"
         },
         {
           "displayText": "\\langle",
@@ -300,11 +300,11 @@
     }
   },
   "tikz": {
-    ".text.tex.latex": {
+    "*": {
       "snippet": [
         {
           "displayText": "\\tikzpicture",
-          "snippet": "\\\\begin{tikzpicture}\n\t$1\n\\\\end{tikzpicture}",
+          "snippet": "\\\\begin{tikzpicture}\n\t$0\n\\\\end{tikzpicture}",
           "rightLabelHTML": "tikz"
         }
       ]
@@ -313,7 +313,7 @@
       "method": [
         {
           "displayText": "\\path",
-          "snippet": "\\\\path\\[$1\\]$2",
+          "snippet": "\\\\path\\[$1\\]$0",
           "description": "Path command"
         },
         {
@@ -398,27 +398,27 @@
     }
   },
   "imports": {
-    ".text.tex.latex": {
+    "*": {
       "import": [
         {
           "displayText": "\\include",
-          "snippet": "\\\\include{$1}$2"
+          "snippet": "\\\\include{$1}$0"
         },
         {
           "displayText": "\\input",
-          "snippet": "\\\\input{$1}$2"
+          "snippet": "\\\\input{$1}$0"
         }
       ],
       "package": [
         {
           "displayText": "\\usepackage",
-          "snippet": "\\\\usepackage$2{$1}$3",
+          "snippet": "\\\\usepackage$2{$1}$0",
           "description": "Load a package",
-          "descriptionMoreURL": "https://www.sharelatex.com/learn/Creating_a_document_in_LaTeX#!#The_preamble_of_a_document"
+          "descriptionMoreURL": "https://www.overleaf.com/learn/latex/Creating_a_document_in_LaTeX#The_preamble_of_a_document"
         },
         {
           "displayText": "\\documentclass",
-          "snippet": "\\\\documentclass$2{$1}$3",
+          "snippet": "\\\\documentclass$2{$1}$0",
           "description": "Set document class",
           "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes"
         }
@@ -426,17 +426,17 @@
     }
   },
   "generalEnvironments": {
-    ".text.tex.latex": {
+    "*": {
       "snippet": [
         {
           "displayText": "\\begin",
-          "snippet": "\\\\begin{$1}$2\n\t$3\n\\\\end{$1}",
+          "snippet": "\\\\begin{$1}$2\n\t$0\n\\\\end{$1}",
           "description": "Begin new environment",
-          "descriptionMoreURL": "https://www.sharelatex.com/learn/Environments"
+          "descriptionMoreURL": "https://www.overleaf.com/learn/latex/Environments"
         },
         {
           "displayText": "\\document",
-          "snippet": "\\\\begin{document}\n$1\n\\\\end{document}"
+          "snippet": "\\\\begin{document}\n$0\n\\\\end{document}"
         },
         {
           "displayText": "\\figure",
@@ -448,52 +448,52 @@
         },
         {
           "displayText": "\\itemize",
-          "snippet": "\\\\begin{itemize}\n\t\\\\item $1\n\\\\end{itemize}",
+          "snippet": "\\\\begin{itemize}\n\t\\\\item $0\n\\\\end{itemize}",
           "description": "Bullet point list"
         },
         {
           "displayText": "\\enumerate",
-          "snippet": "\\\\begin{enumerate}\n\t\\\\item $1\n\\\\end{enumerate}",
+          "snippet": "\\\\begin{enumerate}\n\t\\\\item $0\n\\\\end{enumerate}",
           "description": "Enumerated list"
         },
         {
           "displayText": "\\description",
-          "snippet": "\\\\begin{description}\n\t\\\\item [$1] $2\n\\\\end{description}",
+          "snippet": "\\\\begin{description}\n\t\\\\item [$1] $0\n\\\\end{description}",
           "description": "Descriptive list"
         }
       ]
     }
   },
   "sectioning": {
-    ".text.tex.latex": {
+    "*": {
       "method": [
         {
           "displayText": "\\part",
-          "snippet": "\\\\part$2\\{$1\\}$3"
+          "snippet": "\\\\part$2\\{$1\\}$0"
         },
         {
           "displayText": "\\chapter",
-          "snippet": "\\\\chapter$2\\{$1\\}$3"
+          "snippet": "\\\\chapter$2\\{$1\\}$0"
         },
         {
           "displayText": "\\section",
-          "snippet": "\\\\section$2\\{$1\\}$3"
+          "snippet": "\\\\section$2\\{$1\\}$0"
         },
         {
           "displayText": "\\subsection",
-          "snippet": "\\\\subsection$2\\{$1\\}$3"
+          "snippet": "\\\\subsection$2\\{$1\\}$0"
         },
         {
           "displayText": "\\subsubsection",
-          "snippet": "\\\\subsubsection$2\\{$1\\}$3"
+          "snippet": "\\\\subsubsection$2\\{$1\\}$0"
         },
         {
           "displayText": "\\paragraph",
-          "snippet": "\\\\paragraph$2\\{$1\\}$3"
+          "snippet": "\\\\paragraph$2\\{$1\\}$0"
         },
         {
           "displayText": "\\subparagraph",
-          "snippet": "\\\\subparagraph$2\\{$1\\}$3"
+          "snippet": "\\\\subparagraph$2\\{$1\\}$0"
         },
         {
           "displayText": "\\clearpage",
@@ -507,85 +507,85 @@
     }
   },
   "debugging": {
-    ".text.tex.latex": {
+    "*": {
       "method": [
         {
           "displayText": "\\tracingmacros",
-          "snippet": "\\\\tracingmacros=$1",
+          "snippet": "\\\\tracingmacros=$0",
           "description": "Write all macro expansions to the log file"
         },
         {
           "displayText": "\\tracingcommands",
-          "snippet": "\\\\tracingcommands=$1",
+          "snippet": "\\\\tracingcommands=$0",
           "description": "Write all commands to the log file"
         },
         {
           "displayText": "\\tracinglostchars",
-          "snippet": "\\\\tracinglostchars=$1",
+          "snippet": "\\\\tracinglostchars=$0",
           "description": "Write missing characters to the log file"
         },
         {
           "displayText": "\\tracingonline",
-          "snippet": "\\\\tracingonline=$1",
+          "snippet": "\\\\tracingonline=$0",
           "description": "Write diagnostic info to terminal as well"
         },
         {
           "displayText": "\\tracingoutput",
-          "snippet": "\\\\tracingoutput=$1",
+          "snippet": "\\\\tracingoutput=$0",
           "description": "Write shipped box content to log file"
         },
         {
           "displayText": "\\tracingpages",
-          "snippet": "\\\\tracingpages=$1",
+          "snippet": "\\\\tracingpages=$0",
           "description": "Write page cost calculations to log file"
         },
         {
           "displayText": "\\tracingparagraphs",
-          "snippet": "\\\\tracingparagraphs=$1",
+          "snippet": "\\\\tracingparagraphs=$0",
           "description": "Write line breaking calculations to log file"
         },
         {
           "displayText": "\\tracingrestores",
-          "snippet": "\\\\tracingrestores=$1",
+          "snippet": "\\\\tracingrestores=$0",
           "description": "Write save-stack details to log file"
         },
         {
           "displayText": "\\tracingstats",
-          "snippet": "\\\\tracingstats=$1",
+          "snippet": "\\\\tracingstats=$0",
           "description": "Write memory usage details to log file"
         },
         {
           "displayText": "\\tracingall",
-          "snippet": "\\\\tracingall=$1",
+          "snippet": "\\\\tracingall=$0",
           "description": "Turn on all tracing commands"
         },
         {
           "displayText": "\\tracingassigns",
-          "snippet": "\\\\tracingassigns=$1",
+          "snippet": "\\\\tracingassigns=$0",
           "description": "Trace grouping assignments",
           "rightLabelHTML": "e-teX"
         },
         {
           "displayText": "\\tracinggroups",
-          "snippet": "\\\\tracinggroups=$1",
+          "snippet": "\\\\tracinggroups=$0",
           "description": "Trace group entry and exit",
           "rightLabelHTML": "e-teX"
         },
         {
           "displayText": "\\tracingifs",
-          "snippet": "\\\\tracingifs=$1",
+          "snippet": "\\\\tracingifs=$0",
           "description": "Trace conditional statements",
           "rightLabelHTML": "e-teX"
         },
         {
           "displayText": "\\tracingscantokens",
-          "snippet": "\\\\tracingscantokens=$1",
+          "snippet": "\\\\tracingscantokens=$0",
           "description": "Trace \\scantokens invocation",
           "rightLabelHTML": "e-teX"
         },
         {
           "displayText": "\\tracingcolors",
-          "snippet": "\\\\tracingcolors=$1",
+          "snippet": "\\\\tracingcolors=$0",
           "description": "Trace color information",
           "rightLabelHTML": "xcolor"
         }
@@ -593,36 +593,36 @@
     }
   },
   "biblatex": {
-    ".text.tex.latex": {
+    "*": {
       "method": [
         {
           "displayText": "\\autocite",
-          "snippet": "\\\\autocite$2{$1}$3",
+          "snippet": "\\\\autocite$2{$1}$0",
           "rightLabelHTML": "biblatex"
         },
         {
           "displayText": "\\parencite",
-          "snippet": "\\\\parencite$2{$1}$3",
+          "snippet": "\\\\parencite$2{$1}$0",
           "rightLabelHTML": "biblatex"
         },
         {
           "displayText": "\\cite",
-          "snippet": "\\\\cite$2{$1}$3",
+          "snippet": "\\\\cite$2{$1}$0",
           "rightLabelHTML": "biblatex"
         },
         {
           "displayText": "\\textcite",
-          "snippet": "\\\\textcite$2{$1}$3",
+          "snippet": "\\\\textcite$2{$1}$0",
           "rightLabelHTML": "biblatex"
         },
         {
           "displayText": "\\citetitle",
-          "snippet": "\\\\citetitle$2{$1}$3",
+          "snippet": "\\\\citetitle$2{$1}$0",
           "rightLabelHTML": "biblatex"
         },
         {
           "displayText": "\\footnote",
-          "snippet": "\\\\footnote{$1}$2",
+          "snippet": "\\\\footnote{$1}$0",
           "rightLabelHTML": "biblatex"
         },
         {
@@ -632,14 +632,14 @@
         },
         {
           "displayText": "\\footnotetext",
-          "snippet": "\\\\footnotetext{$1}$2",
+          "snippet": "\\\\footnotetext{$1}$0",
           "rightLabelHTML": "biblatex"
         }
       ]
     }
   },
   "siunitx": {
-    ".text.tex.latex": {
+    "*": {
       "method": [
         {
           "displayText": "\\ang",
@@ -700,7 +700,7 @@
     }
   },
   "xcolor": {
-    ".text.tex.latex": {
+    "*": {
       "method": [
         {
           "displayText": "\\definecolor",
@@ -741,7 +741,7 @@
     }
   },
   "hyperref": {
-    ".text.tex.latex": {
+    "*": {
       "method": [
         {
           "displayText": "\\hypersetup",
@@ -797,25 +797,25 @@
     }
   },
   "amsmath": {
-    ".text.tex.latex": {
+    "*": {
       "snippet": [
         {
           "displayText": "\\align",
-          "snippet": "\\\\begin{align$2}\n\t$1$3\n\\\\end{align$2}",
+          "snippet": "\\\\begin{align$1}\n\t$0\n\\\\end{align$1}",
           "description": "Begin amsmath align environment",
-          "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations",
+          "descriptionMoreURL": "https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath#Aligning_several_equations",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\gather",
           "snippet": "\\\\begin{gather$2}\n\t$1$3\n\\\\end{gather$2}",
           "description": "Begin amsmath gather environment",
-          "descriptionMoreURL": "https://www.sharelatex.com/learn/Aligning_equations_with_amsmath#!#Aligning_several_equations",
+          "descriptionMoreURL": "https://www.overleaf.com/learn/latex/Aligning_equations_with_amsmath#Grouping_and_centering_equations",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\equation",
-          "snippet": "\\\\begin{equation$2}\n\t$1$3\n\\\\end{equation$2}",
+          "snippet": "\\\\begin{equation$1}\n\t$0\n\\\\end{equation$1}",
           "rightLabelHTML": "amsmath"
         }
       ]
@@ -824,74 +824,74 @@
       "snippet": [
         {
           "displayText": "\\aligned",
-          "snippet": "\\\\begin{aligned$2}\n\t$1$3\n\\\\end{aligned$2}",
+          "snippet": "\\\\begin{aligned$1}\n\t$0\n\\\\end{aligned$1}",
           "rightLabelHTML": "amsmath"
         }
       ],
       "method": [
         {
           "displayText": "\\text",
-          "snippet": "\\\\text{$1}$2",
+          "snippet": "\\\\text{$1}$0",
           "description": "Text in mathmode",
           "descriptionMoreURL": "https://en.wikibooks.org/wiki/LaTeX/Mathematics#Adding_text_to_equations",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\binom",
-          "snippet": "\\\\binom{$1}{$2}$3",
+          "snippet": "\\\\binom{$1}{$2}$0",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\tbinom",
-          "snippet": "\\\\tbinom{$1}{$2}$3",
+          "snippet": "\\\\tbinom{$1}{$2}$0",
           "description": "Text style binomial coefficient",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\dbinom",
-          "snippet": "\\\\dbinom{$1}{$2}$3",
+          "snippet": "\\\\dbinom{$1}{$2}$0",
           "description": "Display style binomial coefficient",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\tfrac",
-          "snippet": "\\\\tfrac{$1}{$2}$3",
+          "snippet": "\\\\tfrac{$1}{$2}$0",
           "description": "Text style fraction",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\dfrac",
-          "snippet": "\\\\dfrac{$1}{$2}$3",
+          "snippet": "\\\\dfrac{$1}{$2}$0",
           "description": "Display style fraction",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\cfrac",
-          "snippet": "\\\\cfrac{$1}{$2}$3",
+          "snippet": "\\\\cfrac{$1}{$2}$0",
           "description": "Continued fraction",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\iint",
-          "snippet": "\\\\iint_{$1}$2",
+          "snippet": "\\\\iint_{$1}$0",
           "description": "Double integral",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\iiint",
-          "snippet": "\\\\iiint_{$1}$2",
+          "snippet": "\\\\iiint_{$1}$0",
           "description": "Triple integral",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\iiiint",
-          "snippet": "\\\\iiiint_{$1}$2",
+          "snippet": "\\\\iiiint_{$1}$0",
           "description": "Quadruple integral",
           "rightLabelHTML": "amsmath"
         },
         {
           "displayText": "\\idotsint",
-          "snippet": "\\\\idotsint_{$1}$2",
+          "snippet": "\\\\idotsint_{$1}$0",
           "description": "Dotted integral",
           "rightLabelHTML": "amsmath"
         },
@@ -905,11 +905,11 @@
     }
   },
   "minted": {
-    ".text.tex.latex": {
+    "*": {
       "method": [
         {
           "displayText": "\\minted",
-          "snippet": "\\\\begin{minted}$2{$1}\n\t$3\n\\\\end{minted}$4",
+          "snippet": "\\\\begin{minted}$2{$1}\n\t$0\n\\\\end{minted}",
           "description": "Begin minted environment",
           "rightLabelHTML": "minted"
         },
