@@ -84,7 +84,7 @@ To install, run `apm install autocomplete-latex` or find it in Atom's builtin pa
 
 ### Setup
 
-You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc. For a more customised use, see [Adding completions](#adding-completions).
+You don't need to configure anything to get started; this package will work out of the box to provide completions for common patterns such as `\begin`, `\usepackage`, `\frac`, etc. For a more customised use, see [Adding completions](#adding-completions). E.g., many provided completions add extra cursor tab stops for possible options, which you may prefer to redefine to not include.
 
 If you want file paths to be completed, you can use [`autocomplete-paths`](https://atom.io/packages/autocomplete-paths). Once installed, paste the following into your `config.cson` file (make sure it's in line with the other package names; if the `"autocomplete-paths"` key is already there, paste the part from `scopes` and down, including the last `]`):
 
