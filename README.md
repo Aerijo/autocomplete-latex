@@ -129,7 +129,7 @@ If you want file paths to be completed, you can use [`autocomplete-paths`](https
         ".*"
       ]
       prefixes: [
-        "\\\\inputminted\\{.*\\}\\{"
+        "\\\\inputminted(\\[.*?\\])?\\{.*\\}\\{"
       ]
       relative: true
       scopes: [
